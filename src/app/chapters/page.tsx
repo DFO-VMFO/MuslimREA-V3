@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Users, ArrowRight, Search } from 'lucide-react';
 
@@ -62,7 +63,13 @@ export default function Chapters() {
                   className="bg-white rounded-sm overflow-hidden shadow-md hover:shadow-2xl transition-all cursor-pointer group border border-gray-100"
                 >
                   <div className="h-48 overflow-hidden relative">
-                    <img src={chapter.image} alt={chapter.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <Image
+                      src={chapter.image}
+                      alt={chapter.name}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold shadow" style={{ color: theme.navy }}>
                       {chapter.region}
                     </div>

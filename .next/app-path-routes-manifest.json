@@ -1,6 +1,15 @@
 {
-  "/page": "/",
-  "/events/page": "/events",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/chapters/route": "/api/chapters",
+  "/chapters/[id]/page": "/chapters/[id]",
   "/chapters/page": "/chapters",
-  "/chapters/[id]/page": "/chapters/[id]"
+  "/contact/page": "/contact",
+  "/councils/page": "/councils",
+  "/events/page": "/events",
+  "/membership/page": "/membership",
+  "/page": "/",
+  "/resources/page": "/resources",
+  "/womens-alliance/page": "/womens-alliance"
 }

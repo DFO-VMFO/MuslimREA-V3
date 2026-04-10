@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import { Calendar, MapPin } from 'lucide-react';
 
 const theme = {
@@ -59,7 +60,13 @@ export default function Events() {
               {MOCK_EVENTS.filter(e => filter === 'All' || e.type === filter || e.tags.includes(filter)).map(event => (
                 <div key={event.id} className="bg-white rounded-sm overflow-hidden shadow border border-gray-100 flex flex-col">
                   <div className="h-48 relative">
-                    <img src={event.image} alt={event.title} className="w-full h-full object-cover" />
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover"
+                    />
                     <div className="absolute top-4 left-4 flex space-x-2">
                       <span className="bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold" style={{ color: theme.navy }}>{event.type}</span>
                       {event.tags.includes('Women-Only') && (

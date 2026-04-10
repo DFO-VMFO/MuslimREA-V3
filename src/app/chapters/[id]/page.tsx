@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, Calendar } from 'lucide-react';
 
@@ -43,7 +44,14 @@ export default async function ChapterDetail({ params }: PageProps) {
           {/* Chapter Hero */}
           <div className="relative h-[400px] flex items-center">
             <div className="absolute inset-0 z-0">
-              <img src={chapter.image} alt={chapter.name} className="w-full h-full object-cover" />
+              <Image
+                src={chapter.image}
+                alt={chapter.name}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
               <div className="absolute inset-0" style={{ backgroundColor: theme.navy, opacity: 0.9 }}></div>
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -95,8 +103,14 @@ export default async function ChapterDetail({ params }: PageProps) {
               <div className="space-y-4">
                 {MOCK_EVENTS.filter(e => e.location.includes(chapter.name)).map(event => (
                   <div key={event.id} className="flex flex-col sm:flex-row border border-gray-100 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition bg-white">
-                    <div className="w-full sm:w-48 h-32 sm:h-auto">
-                      <img src={event.image} alt={event.title} className="w-full h-full object-cover" />
+                    <div className="relative w-full sm:w-48 h-32 sm:h-auto sm:min-h-32">
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        sizes="(min-width: 640px) 12rem, 100vw"
+                        className="object-cover"
+                      />
                     </div>
                     <div className="p-4 flex-1 flex flex-col justify-center">
                       <div className="flex space-x-2 mb-2">
