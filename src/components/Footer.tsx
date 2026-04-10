@@ -22,8 +22,9 @@ export default function Footer() {
               <div className="text-[9px] tracking-[0.2em] uppercase" style={{ color: theme.gold }}>Global Network</div>
             </div>
           </div>
-          <p className="text-gray-400 text-sm mb-4 leading-relaxed max-w-xs">A 501(c)(6) non-profit professional trade association dedicated to empowering Muslim real estate professionals worldwide through ethical leadership, advocacy, and community.</p>
-          <p className="text-xs text-gray-600">© {new Date().getFullYear()} Muslim Real Estate Association. All rights reserved.</p>
+          <p className="text-gray-400 text-sm mb-4 leading-relaxed max-w-xs">A 501(c)(6) trade association dedicated to empowering Muslim real estate professionals worldwide through ethical leadership, advocacy, and community.</p>
+          <p className="text-xs text-gray-600 mb-1">&copy; {new Date().getFullYear()} Muslim Real Estate Association, a Texas Nonprofit Corporation.</p>
+          <p className="text-xs text-gray-700 leading-relaxed">501(c)(6) trade organization. Not a securities dealer or investment advisor. Fiscal year ends December 31.</p>
         </div>
 
         {/* Platform */}
@@ -71,7 +72,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-gray-700 text-xs text-gray-600 flex flex-col md:flex-row justify-between gap-3">
-        <p>MREA is a 501(c)(6) non-profit trade association. Not a securities dealer or investment advisor.</p>
+        <p>Muslim Real Estate Association, a Texas Nonprofit Corporation. 501(c)(6) Trade Association. All rights reserved.</p>
         <div className="flex gap-4">
           <Link href="#" className="hover:text-white transition">Privacy Policy</Link>
           <Link href="#" className="hover:text-white transition">Terms of Service</Link>

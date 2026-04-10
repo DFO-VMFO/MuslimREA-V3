@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { ArrowRight, Building2, Users, DollarSign, BarChart3 } from 'lucide-react';
+import { ArrowRight, Building2, Users, DollarSign, BarChart3, Network } from 'lucide-react';
 
 const theme = {
   navy: '#0B1A30',
@@ -11,6 +11,16 @@ const theme = {
 };
 
 const councils = [
+  {
+    slug: 'mwren',
+    name: 'Muslim Women Real Estate Network',
+    icon: <Network size={36} />,
+    tagline: 'The official women\'s professional network of MREA.',
+    description:
+      'MWREN is the authorized women\'s division of MREA, dedicated to advancing Muslim women across residential, commercial, and investment real estate. Through mentorship, professional development, and peer community, MWREN ensures Muslim women have a protected, institutional space in the global real estate industry.',
+    focus: ['Career Advancement & Mentorship', 'Women\'s Leadership Programming', 'Investment Education (Education-Focused)', 'Local Chapter Women\'s Networks'],
+    membership: 'All membership tiers',
+  },
   {
     slug: 'capital-network',
     name: 'MREA Capital Network',

@@ -14,40 +14,43 @@ const theme = {
 
 const membershipPlans = [
   {
-    name: 'Individual Professional',
-    price: '$299/year',
+    name: 'Student Membership',
+    price: 'Complimentary',
     features: [
       'Access to member directory',
       'Chapter event participation',
-      'Deal Room networking',
-      'MWIRE community access',
-      'Professional development resources'
+      'Educational resources library',
+      'Mentorship program eligibility',
+      'Student networking events'
     ],
-    icon: <Users size={32} />
+    icon: <Users size={32} />,
+    badge: 'For students enrolled in real estate or related programs'
   },
   {
-    name: 'Corporate Partner',
+    name: 'Professional Membership',
+    price: '$299/year',
+    features: [
+      'All Student benefits',
+      'Councils access (qualifying tiers)',
+      'Chapter event participation',
+      'Professional development resources',
+      'MWREN community access'
+    ],
+    icon: <Globe size={32} />,
+    badge: 'For licensed agents, brokers, and industry professionals'
+  },
+  {
+    name: 'Corporate Partnership',
     price: '$1,499/year',
     features: [
-      'All Individual benefits',
-      'Priority deal flow access',
+      'All Professional benefits',
+      'Priority council access',
       'Corporate branding on chapter sites',
       'Dedicated account management',
       'Executive networking events'
     ],
-    icon: <Briefcase size={32} />
-  },
-  {
-    name: 'Institutional Investor',
-    price: 'Custom',
-    features: [
-      'All Corporate benefits',
-      'Direct family office connections',
-      'Exclusive investment opportunities',
-      'Global market intelligence',
-      'VIP event invitations'
-    ],
-    icon: <Globe size={32} />
+    icon: <Briefcase size={32} />,
+    badge: 'For firms, brokerages, and institutional partners'
   }
 ];
 
@@ -91,6 +94,9 @@ export default function Membership() {
                     </div>
                     <h3 className="text-xl font-bold mb-2" style={{ color: theme.navy }}>{plan.name}</h3>
                     <div className="text-2xl font-serif font-bold" style={{ color: theme.gold }}>{plan.price}</div>
+                    {'badge' in plan && plan.badge && (
+                      <p className="text-xs text-gray-500 mt-2 italic">{plan.badge}</p>
+                    )}
                   </div>
                   
                   <ul className="space-y-3">

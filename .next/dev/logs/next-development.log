@@ -1,3 +1,105 @@
-[00:00:08.349] Server  LOG     ✓ Ready in 7s
-[00:00:11.367] Server  LOG     ○ Compiling / ...
-[00:00:24.776] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.354] Server  LOG     ✓ Ready in 12.1s
+[00:00:16.372] Server  LOG     ○ Compiling / ...
+[00:00:25.748] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:27.023] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="page.tsx">
+                <SegmentTrieNode>
+                <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                  <Home params={Promise} searchParams={Promise}>
+                    <div className="font-sans ...">
+                      ...
+                        <div className="max-w-7xl ...">
+                          <div className="flex justi...">
+                            <div>
+                            <div className="hidden lg:...">
+                              <LinkComponent>
+                              <LinkComponent>
+                              <LinkComponent>
+                              <LinkComponent>
+                              <LinkComponent>
+                              <DropdownMenu label="Resources" items={[...]}>
+                                <div className="relative" ref={{current:null}}>
+                                  <button
+                                    onClick={function onClick}
+                                    className="flex items-center gap-1 text-gray-300 hover:text-white transition font-..."
+-                                   fdprocessedid="a9tm0s"
+                                  >
+                              <DropdownMenu label="About Us" items={[...]}>
+                                <div className="relative" ref={{current:null}}>
+                                  <button
+                                    onClick={function onClick}
+                                    className="flex items-center gap-1 text-gray-300 hover:text-white transition font-..."
+-                                   fdprocessedid="3dd30y"
+                                  >
+                              ...
+                            ...
+                      <main className="flex-grow">
+                        <div>
+                        <div>
+                        <div>
+                        <div>
+                        <div>
+                        <div className="py-16 bg-w...">
+                          <div className="max-w-xl m...">
+                            <h3>
+                            <p>
+                            <form className="flex flex-..." onSubmit={function onSubmit}>
+                              <input
+                                type="email"
+                                placeholder="Enter your email address"
+                                className="flex-1 px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus..."
+                                style={{--tw-ring-color:"#D4AF37"}}
+-                               fdprocessedid="qz3ez"
+                              >
+                              <button
+                                type="submit"
+                                className="px-6 py-3 rounded-sm font-bold text-sm transition hover:opacity-90 whitespa..."
+                                style={{backgroundColor:"#0B1A30",color:"white"}}
+-                               fdprocessedid="29k7z"
+                              >
++                               Join Mailing List
+                      <Footer>
+                        <footer className="text-white..." style={{...}}>
+                          <div className="max-w-7xl ...">
+                            <div>
+                            <div>
+                            <div>
+                            <div>
+                              <h4>
+                              <p>
+                              <form className="space-y-2" onSubmit={function onSubmit}>
+                                <input
+                                  type="email"
+                                  placeholder="Your email"
+                                  className="w-full px-3 py-2 rounded-sm text-sm text-gray-900 focus:outline-none"
+-                                 fdprocessedid="0uabt8"
+                                >
+                                <button
+                                  type="submit"
+                                  className="w-full py-2 rounded-sm text-sm font-bold transition hover:opacity-90"
+                                  style={{backgroundColor:"#D4AF37",color:"#0B1A30"}}
+-                                 fdprocessedid="abh47"
+                                >
++                                 Join Mailing List
+                          ...
+              ...
+            ...
+
+[00:07:15.585] Server  LOG     ✓ Compiled in 191ms

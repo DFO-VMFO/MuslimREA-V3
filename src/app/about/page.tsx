@@ -11,12 +11,9 @@ const theme = {
 };
 
 const boardMembers = [
-  { name: 'Zulikha Hussain', title: 'Chairman & Founder', region: 'National' },
-  { name: 'Board Member', title: 'Vice Chairman', region: 'North America' },
-  { name: 'Board Member', title: 'Secretary', region: 'National' },
-  { name: 'Board Member', title: 'Treasurer', region: 'National' },
-  { name: 'Board Member', title: 'Director – Middle East', region: 'MENA' },
-  { name: 'Board Member', title: 'Director – Europe', region: 'Europe' },
+  { name: 'ZuliKha Hussain', title: 'Director / Incorporator', region: 'National' },
+  { name: 'Mohammad Wasif Hussain', title: 'Director', region: 'National' },
+  { name: 'Zehra Hussain', title: 'Director', region: 'National' },
 ];
 
 export default function AboutPage() {
@@ -46,19 +43,25 @@ export default function AboutPage() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-serif font-bold mb-6" style={{ color: theme.navy }}>Our History & Mission</h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                The Muslim Real Estate Association (MREA) was founded on the conviction that Muslim professionals deserve a national, faith-aligned institutional home in the real estate industry — one that mirrors the professionalism and advocacy power of organizations like NAHREP, AREAA, and NAR.
+                The Muslim Real Estate Association (MREA) was incorporated on <strong>March 2, 2026</strong> as a <strong>Texas Nonprofit Corporation</strong> — a formal declaration of the conviction that Muslim professionals deserve a national, faith-aligned institutional home in the real estate industry, one that mirrors the professionalism and advocacy power of organizations like NAHREP, AREAA, and NAR.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                MREA is organized as a 501(c)(6) non-profit trade association, meaning our mission is exclusively focused on advancing the professional interests of our members and the broader Muslim real estate community — not personal profit.
+                MREA is organized under <strong>Section 501(c)(6)</strong> of the Internal Revenue Code as a professional trade association. Our purpose is exclusively focused on the common business interests of our members and the broader Muslim real estate community — not personal profit or individual investment gain.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                From advocacy on Capitol Hill to local chapter deal rooms, from the Muslim Developer Council to the Muslim Women Real Estate Alliance, MREA provides the infrastructure, relationships, and resources that allow our members to compete, grow, and lead at the highest levels.
+                From advocacy and policy research to local chapter events, from the Muslim Developer Council to our growing network of sub-divisions, MREA provides the infrastructure, relationships, and resources that allow our members to compete, grow, and lead at the highest levels.
               </p>
 
-              <div className="bg-slate-50 border-l-4 p-6 rounded-r-sm" style={{ borderColor: theme.gold }}>
+              <div className="bg-slate-50 border-l-4 p-6 rounded-r-sm mb-4" style={{ borderColor: theme.gold }}>
+                <h4 className="font-bold text-sm uppercase tracking-wider mb-2" style={{ color: theme.navy }}>Official Purpose (Articles of Incorporation)</h4>
+                <p className="text-gray-700 italic leading-relaxed text-sm">
+                  &ldquo;To promote the common business interest of Muslim real estate professionals and related trades and to improve business conditions within the real estate industry by providing professional development, ethical leadership, industry research, education, collaboration, networking, and industry advocacy.&rdquo;
+                </p>
+              </div>
+              <div className="bg-slate-50 border-l-4 p-6 rounded-r-sm" style={{ borderColor: `${theme.navy}40` }}>
                 <h4 className="font-bold text-sm uppercase tracking-wider mb-2" style={{ color: theme.navy }}>Our Mission</h4>
-                <p className="text-gray-700 italic leading-relaxed">
-                  "To empower real estate professionals to elevate client services, advance careers, build wealth ethically, and strengthen communities through a global, faith-aligned professional trade association."
+                <p className="text-gray-700 italic leading-relaxed text-sm">
+                  &ldquo;To serve as a leading global trade body for Muslim real estate professionals and aligned industry participants, advancing professional excellence and ethical development.&rdquo;
                 </p>
               </div>
             </div>
@@ -67,11 +70,11 @@ export default function AboutPage() {
               <div className="bg-slate-900 p-6 rounded-sm text-white">
                 <h4 className="font-bold uppercase tracking-wider text-xs mb-4" style={{ color: theme.gold }}>Association Facts</h4>
                 <ul className="space-y-3 text-sm text-gray-300">
-                  <li className="flex justify-between"><span>Status</span><span className="font-bold text-white">501(c)(6)</span></li>
-                  <li className="flex justify-between"><span>Founded</span><span className="font-bold text-white">2023</span></li>
-                  <li className="flex justify-between"><span>Chapters</span><span className="font-bold text-white">50+</span></li>
-                  <li className="flex justify-between"><span>Councils</span><span className="font-bold text-white">4</span></li>
-                  <li className="flex justify-between"><span>Women&apos;s Division</span><span className="font-bold text-white">MWREA</span></li>
+                  <li className="flex justify-between"><span>Entity Type</span><span className="font-bold text-white">Texas Nonprofit Corp</span></li>
+                  <li className="flex justify-between"><span>Tax Status</span><span className="font-bold text-white">501(c)(6)</span></li>
+                  <li className="flex justify-between"><span>Incorporated</span><span className="font-bold text-white">March 2, 2026</span></li>
+                  <li className="flex justify-between"><span>Fiscal Year End</span><span className="font-bold text-white">December 31</span></li>
+                  <li className="flex justify-between"><span>Councils</span><span className="font-bold text-white">5</span></li>
                 </ul>
               </div>
               <div className="bg-white border border-gray-100 shadow p-6 rounded-sm">
