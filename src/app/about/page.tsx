@@ -123,8 +123,8 @@ export default function AboutPage() {
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
                   <div className="w-14 h-14 rounded-full bg-slate-200 flex items-center justify-center text-xl font-bold" style={{ color: theme.navy }}>ZH</div>
                   <div>
-                    <div className="font-bold text-lg" style={{ color: theme.navy }}>Zulikha Hussain</div>
-                    <div className="text-sm text-gray-500 uppercase tracking-wide">Chairman & Founder, MREA</div>
+                    <div className="font-bold text-lg" style={{ color: theme.navy }}>ZuliKha Hussain</div>
+                    <div className="text-sm text-gray-500 uppercase tracking-wide">Director / Incorporator, MREA</div>
                   </div>
                 </div>
               </div>
