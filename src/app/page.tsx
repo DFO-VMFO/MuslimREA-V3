@@ -41,7 +41,7 @@ export default function Home() {
               Empowering Muslim Real Estate Professionals Worldwide
             </h1>
             <p className="text-xl text-gray-300 mb-4 max-w-3xl mx-auto">
-              To empower real estate professionals to elevate client services, advance careers, build wealth ethically, and strengthen communities through a global, faith-aligned professional trade association.
+              To serve as a leading global trade body for Muslim real estate professionals and aligned industry participants, advancing professional excellence and ethical development.
             </p>
             <p className="text-sm text-gray-400 mb-10 max-w-2xl mx-auto">
               Connecting capital, developers, and professionals across 50+ global chapters through professional development, ethical leadership, and advocacy.
