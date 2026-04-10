@@ -97,6 +97,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.js [app-rsc] (ecmascript) <export default as Users>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$dollar$2d$sign$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__DollarSign$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/dollar-sign.js [app-rsc] (ecmascript) <export default as DollarSign>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chart-column.js [app-rsc] (ecmascript) <export default as BarChart3>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$network$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Network$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/network.js [app-rsc] (ecmascript) <export default as Network>");
 ;
 ;
 ;
@@ -110,13 +111,33 @@ const theme = {
 };
 const councils = [
     {
+        slug: 'mwren',
+        name: 'Muslim Women Real Estate Network',
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$network$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Network$3e$__["Network"], {
+            size: 36
+        }, void 0, false, {
+            fileName: "[project]/src/app/councils/page.tsx",
+            lineNumber: 17,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0)),
+        tagline: 'The official women\'s professional network of MREA.',
+        description: 'MWREN is the authorized women\'s division of MREA, dedicated to advancing Muslim women across residential, commercial, and investment real estate. Through mentorship, professional development, and peer community, MWREN ensures Muslim women have a protected, institutional space in the global real estate industry.',
+        focus: [
+            'Career Advancement & Mentorship',
+            'Women\'s Leadership Programming',
+            'Investment Education (Education-Focused)',
+            'Local Chapter Women\'s Networks'
+        ],
+        membership: 'All membership tiers'
+    },
+    {
         slug: 'capital-network',
         name: 'MREA Capital Network',
         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$dollar$2d$sign$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__DollarSign$3e$__["DollarSign"], {
             size: 36
         }, void 0, false, {
             fileName: "[project]/src/app/councils/page.tsx",
-            lineNumber: 17,
+            lineNumber: 27,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0)),
         tagline: 'Bridging faith-aligned capital with real estate opportunity.',
@@ -136,7 +157,7 @@ const councils = [
             size: 36
         }, void 0, false, {
             fileName: "[project]/src/app/councils/page.tsx",
-            lineNumber: 27,
+            lineNumber: 37,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0)),
         tagline: 'A peer network for developers building the future.',
@@ -156,7 +177,7 @@ const councils = [
             size: 36
         }, void 0, false, {
             fileName: "[project]/src/app/councils/page.tsx",
-            lineNumber: 37,
+            lineNumber: 47,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0)),
         tagline: 'Preserving and growing generational wealth.',
@@ -176,7 +197,7 @@ const councils = [
             size: 36
         }, void 0, false, {
             fileName: "[project]/src/app/councils/page.tsx",
-            lineNumber: 47,
+            lineNumber: 57,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0)),
         tagline: 'Rigorous analysis. Ethical diligence.',
@@ -196,7 +217,7 @@ function CouncilsPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Navbar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/councils/page.tsx",
-                lineNumber: 59,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -218,7 +239,7 @@ function CouncilsPage() {
                                     children: "Strategic Networks"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/councils/page.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 74,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -226,7 +247,7 @@ function CouncilsPage() {
                                     children: "MREA Councils"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/councils/page.tsx",
-                                    lineNumber: 67,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -234,18 +255,18 @@ function CouncilsPage() {
                                     children: "Four specialized councils connecting professionals, capital, and developers around shared goals — built on ethical leadership and institutional rigor."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/councils/page.tsx",
-                                    lineNumber: 68,
+                                    lineNumber: 78,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/councils/page.tsx",
-                            lineNumber: 63,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/councils/page.tsx",
-                        lineNumber: 62,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -275,7 +296,7 @@ function CouncilsPage() {
                                                             children: council.icon
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 82,
+                                                            lineNumber: 92,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -283,7 +304,7 @@ function CouncilsPage() {
                                                             children: council.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 85,
+                                                            lineNumber: 95,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -294,13 +315,13 @@ function CouncilsPage() {
                                                             children: council.tagline
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 86,
+                                                            lineNumber: 96,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/councils/page.tsx",
-                                                    lineNumber: 81,
+                                                    lineNumber: 91,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -311,7 +332,7 @@ function CouncilsPage() {
                                                             children: "Eligibility"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 89,
+                                                            lineNumber: 99,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -319,19 +340,19 @@ function CouncilsPage() {
                                                             children: council.membership
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 90,
+                                                            lineNumber: 100,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/councils/page.tsx",
-                                                    lineNumber: 88,
+                                                    lineNumber: 98,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/councils/page.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 90,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -344,7 +365,7 @@ function CouncilsPage() {
                                                             children: council.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 97,
+                                                            lineNumber: 107,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -359,7 +380,7 @@ function CouncilsPage() {
                                                                             }
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                                            lineNumber: 101,
+                                                                            lineNumber: 111,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -367,24 +388,24 @@ function CouncilsPage() {
                                                                             children: item
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                                            lineNumber: 102,
+                                                                            lineNumber: 112,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, item, true, {
                                                                     fileName: "[project]/src/app/councils/page.tsx",
-                                                                    lineNumber: 100,
+                                                                    lineNumber: 110,
                                                                     columnNumber: 25
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 98,
+                                                            lineNumber: 108,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/councils/page.tsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 106,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -403,13 +424,13 @@ function CouncilsPage() {
                                                                     className: "w-4 h-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/councils/page.tsx",
-                                                                    lineNumber: 110,
+                                                                    lineNumber: 120,
                                                                     columnNumber: 40
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 108,
+                                                            lineNumber: 118,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -422,35 +443,35 @@ function CouncilsPage() {
                                                             children: "Contact Council"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/councils/page.tsx",
-                                                            lineNumber: 112,
+                                                            lineNumber: 122,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/councils/page.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 117,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/councils/page.tsx",
-                                            lineNumber: 95,
+                                            lineNumber: 105,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, council.slug, true, {
                                     fileName: "[project]/src/app/councils/page.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 88,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/councils/page.tsx",
-                            lineNumber: 76,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/councils/page.tsx",
-                        lineNumber: 75,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -466,7 +487,7 @@ function CouncilsPage() {
                                     children: "Ready to engage with a council?"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/councils/page.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 136,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -474,7 +495,7 @@ function CouncilsPage() {
                                     children: "Council access is tied to your MREA membership tier. Upgrade your membership to unlock the right network for your goals."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/councils/page.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 137,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -487,35 +508,35 @@ function CouncilsPage() {
                                     children: "View Membership Tiers"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/councils/page.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/councils/page.tsx",
-                            lineNumber: 125,
+                            lineNumber: 135,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/councils/page.tsx",
-                        lineNumber: 124,
+                        lineNumber: 134,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/councils/page.tsx",
-                lineNumber: 60,
+                lineNumber: 70,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/councils/page.tsx",
-                lineNumber: 135,
+                lineNumber: 145,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/councils/page.tsx",
-        lineNumber: 58,
+        lineNumber: 68,
         columnNumber: 5
     }, this);
 }

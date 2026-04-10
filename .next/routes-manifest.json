@@ -80,6 +80,12 @@
       "namedRegex": "^/councils(?:/)?$"
     },
     {
+      "page": "/ethics",
+      "regex": "^/ethics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ethics(?:/)?$"
+    },
+    {
       "page": "/events",
       "regex": "^/events(?:/)?$",
       "routeKeys": {},

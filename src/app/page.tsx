@@ -79,7 +79,7 @@ export default function Home() {
                 <div className="text-gray-400 text-sm uppercase tracking-wide">Global Chapters</div>
               </div>
               <div>
-                <div className="text-4xl font-serif font-bold mb-2 text-white">4</div>
+                <div className="text-4xl font-serif font-bold mb-2 text-white">5</div>
                 <div className="text-gray-400 text-sm uppercase tracking-wide">Strategic Councils</div>
               </div>
               <div>
@@ -94,30 +94,77 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Pillars Section */}
+        {/* MREA Standard — Ethical Pillars */}
+        <div className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Our Values</span>
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>The MREA Standard</h2>
+              <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
+              <p className="text-gray-500 mt-5 max-w-2xl mx-auto text-sm leading-relaxed">
+                MREA is built on Islamic principles of professional ethics — values that transcend background and apply to every member of our global community.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  arabic: 'عدل & أمانة',
+                  title: 'Fairness & Integrity',
+                  subtitle: 'Adl & Amanah',
+                  desc: 'Every transaction, negotiation, and professional relationship must be grounded in justice and trustworthiness. We hold our members to the highest standards of honest dealing.'
+                },
+                {
+                  arabic: 'خلافة',
+                  title: 'Stewardship',
+                  subtitle: 'Khilafah',
+                  desc: 'Real estate is not merely commerce — it is the stewardship of community assets. MREA members are responsible builders of neighborhoods, wealth, and legacy.'
+                },
+                {
+                  arabic: 'ازدهار مشترك',
+                  title: 'Shared Prosperity',
+                  subtitle: 'Collaborative Growth',
+                  desc: 'Wealth built ethically lifts entire communities. We reject zero-sum competition and build networks where success is shared and opportunity is widened.'
+                }
+              ].map((pillar, i) => (
+                <div key={i} className="border border-gray-100 rounded-sm p-8 bg-slate-50 text-center group hover:shadow-md transition-shadow">
+                  <div className="text-3xl font-serif mb-3 opacity-30" style={{ color: theme.navy }}>{pillar.arabic}</div>
+                  <h3 className="text-xl font-bold mb-1" style={{ color: theme.navy }}>{pillar.title}</h3>
+                  <div className="text-xs uppercase tracking-widest mb-4 font-semibold" style={{ color: theme.gold }}>{pillar.subtitle}</div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{pillar.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-slate-900 rounded-sm px-8 py-5 text-center">
+              <p className="text-gray-300 text-sm italic">
+                &ldquo;MREA welcomes professionals of all faiths who align with our commitment to ethical real estate practice and professional excellence.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Professional Ecosystem */}
         <div className="py-24" style={{ backgroundColor: theme.lightGray }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Core Institutional Pillars</h2>
+            <div className="text-center mb-14">
+              <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Member Services</span>
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Professional Ecosystem</h2>
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {[
-                { icon: <Briefcase size={32}/>, title: 'Strategic Councils', desc: 'Four specialized councils — Capital Network, Developer Council, Family Office Circle, and an Investment Review Committee — connecting professionals with aligned goals.', href: '/councils' },
-                { icon: <Globe size={32}/>, title: 'Chapter Architecture', desc: 'Localized leadership with a unified national infrastructure. Engage with market-specific events and board members in over 50 chapters worldwide.', href: '/chapters' },
-                { icon: <Shield size={32}/>, title: 'Advocacy & Policy', desc: 'Dedicated research hubs and policy task forces ensuring the advancement of Muslim-led communities in global real estate markets.', href: '/resources' }
-              ].map((pillar, i) => (
-                <Link key={i} href={pillar.href} className="bg-white p-8 rounded shadow-md border border-gray-100 hover:shadow-xl transition-shadow group block">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
-                    {pillar.icon}
+                { icon: <Globe size={28}/>, title: 'Education & Mentorship', desc: 'Leadership advancement programs and mentorship pathways for members at every career stage.' },
+                { icon: <Briefcase size={28}/>, title: 'Deal Room & Joint Ventures', desc: 'Professional collaboration on commercial and residential projects across the network.' },
+                { icon: <ArrowRight size={28}/>, title: 'Cross-Border Referrals', desc: 'A trusted referral network spanning USA, Canada, UK, UAE and growing international hubs.' },
+                { icon: <Shield size={28}/>, title: 'Market Intelligence', desc: 'Localized expertise, research reports, and market data shared across chapters.' },
+                { icon: <Users size={28}/>, title: 'Ethical Investment', desc: 'Values-based standards for development and investment, grounded in the MREA Standard.' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white p-6 rounded shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
+                    {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-3" style={{ color: theme.navy }}>{pillar.title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">{pillar.desc}</p>
-                  <span className="flex items-center gap-1 text-sm font-bold group-hover:gap-2 transition-all" style={{ color: theme.gold }}>
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </span>
-                </Link>
+                  <h3 className="font-bold text-sm mb-2 leading-snug" style={{ color: theme.navy }}>{item.title}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
+                </div>
               ))}
             </div>
           </div>

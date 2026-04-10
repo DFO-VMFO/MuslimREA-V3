@@ -146,6 +146,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/ethics": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/ethics",
+      "dataRoute": "/ethics.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/events": {
       "experimentalBypassFor": [
         {
@@ -270,8 +294,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "51f453cfdfedfbec3506064ca24db3d0",
-    "previewModeSigningKey": "3226ecc22d954a4de1b6cc3f4a723d05b01915f90cdb1543784f3e8778adb77f",
-    "previewModeEncryptionKey": "8e4fb0b52bfe3a4cf47509a475c09b34eb905da73993e6abb0e080f6afe51f1f"
+    "previewModeId": "f8950fabc37ce9ca10cadf12cdd88d3b",
+    "previewModeSigningKey": "bf234cba2964eed61f7ce7ce2d50042d529aaa28899488b251c5921166b079c2",
+    "previewModeEncryptionKey": "ff42f0fe3fde95278dbe1690f1878122388b2e8f4bae7def6f388a63a5c07156"
   }
 }

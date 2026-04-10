@@ -12,7 +12,7 @@ const theme = {
 export default function Footer() {
   return (
     <footer className="text-white py-14" style={{ backgroundColor: theme.charcoal }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-6 gap-8">
         {/* Brand */}
         <div className="md:col-span-2">
           <div className="flex items-center mb-4">
@@ -47,9 +47,21 @@ export default function Footer() {
             <li><Link href="/about" className="hover:text-white transition">About MREA</Link></li>
             <li><Link href="/about#leadership" className="hover:text-white transition">Leadership</Link></li>
             <li><Link href="/about#chairman" className="hover:text-white transition">Chairman&apos;s Message</Link></li>
+            <li><Link href="/ethics" className="hover:text-white transition">Ethics &amp; Standards</Link></li>
             <li><Link href="/resources" className="hover:text-white transition">Resources</Link></li>
             <li><Link href="/resources#media" className="hover:text-white transition">Press Releases</Link></li>
             <li><Link href="/contact" className="hover:text-white transition">Contact Us</Link></li>
+          </ul>
+        </div>
+
+        {/* Global Hubs */}
+        <div>
+          <h4 className="font-bold mb-4 uppercase text-xs tracking-widest" style={{ color: theme.gold }}>Global Hubs</h4>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            <li><Link href="/chapters#usa" className="hover:text-white transition">🇺🇸 United States</Link></li>
+            <li><Link href="/chapters#canada" className="hover:text-white transition">🇨🇦 Canada</Link></li>
+            <li><Link href="/chapters#uk" className="hover:text-white transition">🇬🇧 United Kingdom</Link></li>
+            <li><Link href="/chapters#uae" className="hover:text-white transition">🇦🇪 UAE</Link></li>
           </ul>
         </div>
 
