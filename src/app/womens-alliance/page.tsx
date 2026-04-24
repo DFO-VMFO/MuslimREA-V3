@@ -180,8 +180,8 @@ export default function WomensAlliancePage() {
             <h3 className="text-xl font-serif font-bold mb-2" style={{ color: theme.navy }}>Stay Connected with MWREA</h3>
             <p className="text-gray-500 mb-5 text-sm">Join the mailing list for events, mentorship opportunities, and investment education updates.</p>
             <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="Your email address" className="flex-1 px-4 py-3 border border-gray-300 rounded-sm text-sm focus:outline-none focus:ring-2" />
-              <button type="submit" className="px-6 py-3 rounded-sm font-bold text-sm whitespace-nowrap"
+              <input type="email" placeholder="Your email address" className="flex-1 px-4 py-3 border border-gray-300 rounded-sm text-sm focus:outline-none focus:ring-2" suppressHydrationWarning />
+              <button type="submit" suppressHydrationWarning className="px-6 py-3 rounded-sm font-bold text-sm whitespace-nowrap"
                       style={{ backgroundColor: theme.navy, color: 'white' }}>
                 Subscribe
               </button>

@@ -27,7 +27,7 @@ const membershipPlans = [
     badge: 'For students enrolled in real estate or related programs'
   },
   {
-    name: 'Professional Membership',
+    name: 'Individual Professional',
     price: '$299/year',
     features: [
       'All Student benefits',

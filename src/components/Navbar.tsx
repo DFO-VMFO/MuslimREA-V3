@@ -27,6 +27,7 @@ function DropdownMenu({ label, items }: { label: string; items: { href: string; 
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center gap-1 text-gray-300 hover:text-white transition font-medium"
+        suppressHydrationWarning
       >
         {label} <ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>

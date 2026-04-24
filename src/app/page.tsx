@@ -196,9 +196,10 @@ export default function Home() {
                 type="email"
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-1 text-sm"
+                suppressHydrationWarning
                 style={{ '--tw-ring-color': theme.gold } as CSSProperties}
               />
-              <button type="submit" className="px-6 py-3 rounded-sm font-bold text-sm transition hover:opacity-90 whitespace-nowrap"
+              <button type="submit" suppressHydrationWarning className="px-6 py-3 rounded-sm font-bold text-sm transition hover:opacity-90 whitespace-nowrap"
                       style={{ backgroundColor: theme.navy, color: 'white' }}>
                 Join Mailing List
               </button>

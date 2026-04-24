@@ -74,8 +74,9 @@ export default function Footer() {
               type="email"
               placeholder="Your email"
               className="w-full px-3 py-2 rounded-sm text-sm text-gray-900 focus:outline-none"
+              suppressHydrationWarning
             />
-            <button type="submit" className="w-full py-2 rounded-sm text-sm font-bold transition hover:opacity-90"
+            <button type="submit" suppressHydrationWarning className="w-full py-2 rounded-sm text-sm font-bold transition hover:opacity-90"
                     style={{ backgroundColor: theme.gold, color: theme.navy }}>
               Join Mailing List
             </button>
@@ -86,9 +87,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-gray-700 text-xs text-gray-600 flex flex-col md:flex-row justify-between gap-3">
         <p>Muslim Real Estate Association, a Texas Nonprofit Corporation. 501(c)(6) Trade Association. All rights reserved.</p>
         <div className="flex gap-4">
-          <Link href="#" className="hover:text-white transition">Privacy Policy</Link>
-          <Link href="#" className="hover:text-white transition">Terms of Service</Link>
-          <Link href="#" className="hover:text-white transition">Bylaws</Link>
+          <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
+          <Link href="/ethics" className="hover:text-white transition">Ethics & Standards</Link>
         </div>
       </div>
     </footer>

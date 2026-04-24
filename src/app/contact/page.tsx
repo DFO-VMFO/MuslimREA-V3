@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const theme = {
   navy: '#0B1A30',
@@ -12,14 +12,30 @@ const theme = {
   lightGray: '#F5F7FA',
 };
 
+// Formspree endpoint — replace FORM_ID with your actual Formspree form ID
+const FORMSPREE_URL = 'https://formspree.io/f/info@muslimrea.org';
+
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // In production: wire to an API route or form service
-    setSubmitted(true);
+    setStatus('submitting');
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   }
 
   return (
@@ -92,18 +108,24 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="lg:col-span-2">
-              {submitted ? (
+              {status === 'success' ? (
                 <div className="flex flex-col items-center justify-center h-full py-20 text-center">
                   <CheckCircle className="w-16 h-16 mb-4" style={{ color: theme.gold }} />
                   <h3 className="text-2xl font-serif font-bold mb-3" style={{ color: theme.navy }}>Message Received</h3>
                   <p className="text-gray-500 max-w-sm">Thank you for reaching out. A member of the MREA team will respond to your inquiry within 2 business days.</p>
-                  <button onClick={() => { setSubmitted(false); setForm({ name: '', email: '', subject: '', message: '' }); }}
+                  <button onClick={() => { setStatus('idle'); setForm({ name: '', email: '', subject: '', message: '' }); }}
                           className="mt-6 text-sm font-bold hover:underline" style={{ color: theme.gold }}>
                     Send another message
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {status === 'error' && (
+                    <div className="flex items-center gap-2 p-4 rounded-sm bg-red-50 border border-red-200 text-red-700 text-sm">
+                      <AlertCircle className="w-4 h-4 shrink-0" />
+                      Something went wrong. Please try again or email us directly at <a href="mailto:info@muslimrea.org" className="underline ml-1">info@muslimrea.org</a>
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-semibold mb-2" style={{ color: theme.navy }}>Full Name <span className="text-red-500">*</span></label>
@@ -125,6 +147,7 @@ export default function ContactPage() {
                         onChange={e => setForm({ ...form, email: e.target.value })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-sm text-sm focus:outline-none focus:ring-2 focus:ring-offset-1"
                         placeholder="you@example.com"
+                        suppressHydrationWarning
                       />
                     </div>
                   </div>
@@ -158,10 +181,10 @@ export default function ContactPage() {
                       placeholder="Tell us how we can help..."
                     />
                   </div>
-                  <button type="submit"
-                          className="flex items-center gap-2 px-8 py-3 rounded-sm font-bold text-sm transition hover:opacity-90"
+                  <button type="submit" suppressHydrationWarning disabled={status === 'submitting'}
+                          className="flex items-center gap-2 px-8 py-3 rounded-sm font-bold text-sm transition hover:opacity-90 disabled:opacity-60"
                           style={{ backgroundColor: theme.navy, color: 'white' }}>
-                    <Send className="w-4 h-4" /> Send Message
+                    <Send className="w-4 h-4" /> {status === 'submitting' ? 'Sending…' : 'Send Message'}
                   </button>
                 </form>
               )}

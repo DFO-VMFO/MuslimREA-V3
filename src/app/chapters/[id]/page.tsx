@@ -11,12 +11,15 @@ const theme = {
   lightGray: '#F5F7FA'
 };
 
-// Mock data - in real app, fetch based on id
+// All chapter slugs — kept in sync with chapters/page.tsx
 const MOCK_CHAPTERS = {
-  houston: { id: 'houston', name: 'Houston', region: 'North America', members: 1240, image: 'https://images.unsplash.com/photo-1531218150217-54595bc8bbf9?auto=format&fit=crop&q=80&w=800' },
-  dubai: { id: 'dubai', name: 'Dubai', region: 'Middle East', members: 3100, image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800' },
-  london: { id: 'london', name: 'London', region: 'Europe', members: 2150, image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=800' },
-  istanbul: { id: 'istanbul', name: 'Istanbul', region: 'Europe/Asia', members: 1800, image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800' },
+  houston: { id: 'houston', name: 'Houston, TX', country: 'United States', flag: '🇺🇸', region: 'North America', members: 1240, image: 'https://images.unsplash.com/photo-1531218150217-54595bc8bbf9?auto=format&fit=crop&q=80&w=800' },
+  dallas: { id: 'dallas', name: 'Dallas, TX', country: 'United States', flag: '🇺🇸', region: 'North America', members: 870, image: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&q=80&w=800' },
+  toronto: { id: 'toronto', name: 'Toronto, ON', country: 'Canada', flag: '🇨🇦', region: 'North America', members: 760, image: 'https://images.unsplash.com/photo-1517090504586-fde19ea6066f?auto=format&fit=crop&q=80&w=800' },
+  london: { id: 'london', name: 'London', country: 'United Kingdom', flag: '🇬🇧', region: 'Europe', members: 2150, image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=800' },
+  dubai: { id: 'dubai', name: 'Dubai', country: 'United Arab Emirates', flag: '🇦🇪', region: 'Middle East', members: 3100, image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800' },
+  'abu-dhabi': { id: 'abu-dhabi', name: 'Abu Dhabi', country: 'United Arab Emirates', flag: '🇦🇪', region: 'Middle East', members: 540, image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80&w=800' },
+  istanbul: { id: 'istanbul', name: 'Istanbul', country: 'Turkey', flag: '🇹🇷', region: 'Europe / Asia', members: 1800, image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800' },
 };
 
 const MOCK_EVENTS = [
@@ -33,7 +36,17 @@ export default async function ChapterDetail({ params }: PageProps) {
   const chapter = MOCK_CHAPTERS[id as keyof typeof MOCK_CHAPTERS];
 
   if (!chapter) {
-    return <div>Chapter not found</div>;
+    return (
+      <div className="font-sans flex flex-col min-h-screen text-slate-900">
+        <Navbar />
+        <main className="flex-grow flex flex-col items-center justify-center py-24 px-4" style={{ backgroundColor: '#F5F7FA' }}>
+          <h1 className="text-3xl font-serif font-bold mb-3" style={{ color: '#0B1A30' }}>Chapter Not Found</h1>
+          <p className="text-gray-500 mb-6">This chapter doesn&apos;t exist or hasn&apos;t launched yet.</p>
+          <Link href="/chapters" className="px-6 py-3 rounded-sm font-bold text-sm text-white" style={{ backgroundColor: '#0B1A30' }}>View All Chapters</Link>
+        </main>
+        <Footer />
+      </div>
+    );
   }
 
   return (
@@ -61,7 +74,7 @@ export default async function ChapterDetail({ params }: PageProps) {
               <div className="flex flex-col md:flex-row md:items-end justify-between">
                 <div>
                   <span className="uppercase tracking-[0.2em] font-bold text-sm mb-2 block" style={{ color: theme.gold }}>
-                    Official Chapter
+                    {chapter.flag} {chapter.country} — Official Chapter
                   </span>
                   <h1 className="text-5xl font-serif text-white font-bold">MREA {chapter.name}</h1>
                 </div>
