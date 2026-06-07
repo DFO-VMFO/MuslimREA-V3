@@ -40,7 +40,7 @@ export default function MemberPortal() {
     if (authError) {
       setError(
         authError.message === 'Invalid login credentials'
-          ? 'Incorrect email or password. Please try again or contact admin@muslimrea.org.'
+          ? 'Incorrect email or password. Please try again or contact info@muslimrea.org.'
           : authError.message,
       );
     } else {
@@ -151,8 +151,8 @@ export default function MemberPortal() {
 
           <p className="mt-4 text-center text-xs text-gray-500">
             Questions? Email{' '}
-            <a href="mailto:admin@muslimrea.org" className="underline">
-              admin@muslimrea.org
+            <a href="mailto:info@muslimrea.org" className="underline">
+              info@muslimrea.org
             </a>
           </p>
         </div>

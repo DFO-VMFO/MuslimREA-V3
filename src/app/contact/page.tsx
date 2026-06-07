@@ -78,7 +78,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="font-semibold text-sm mb-1" style={{ color: theme.navy }}>Email</div>
-                      <a href="mailto:admin@muslimrea.org" className="text-sm text-gray-500 hover:underline">admin@muslimrea.org</a>
+                      <a href="mailto:info@muslimrea.org" className="text-sm text-gray-500 hover:underline">info@muslimrea.org</a>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -96,10 +96,10 @@ export default function ContactPage() {
               <div className="bg-slate-900 rounded-sm p-6 text-white">
                 <h4 className="font-bold text-sm uppercase tracking-wider mb-4" style={{ color: theme.gold }}>Quick Contacts</h4>
                 <ul className="space-y-3 text-sm text-gray-300">
-                  <li><span className="font-semibold text-white">Membership:</span><br />admin@muslimrea.org</li>
-                  <li><span className="font-semibold text-white">Press & Media:</span><br />admin@muslimrea.org</li>
-                  <li><span className="font-semibold text-white">Women&apos;s Alliance:</span><br />admin@muslimrea.org</li>
-                  <li><span className="font-semibold text-white">Chapter Inquiries:</span><br />admin@muslimrea.org</li>
+                  <li><span className="font-semibold text-white">Membership:</span><br />info@muslimrea.org</li>
+                  <li><span className="font-semibold text-white">Press & Media:</span><br />press@muslimrea.org</li>
+                  <li><span className="font-semibold text-white">Women&apos;s Alliance:</span><br />mwrea@muslimrea.org</li>
+                  <li><span className="font-semibold text-white">Chapter Inquiries:</span><br />chapters@muslimrea.org</li>
                 </ul>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                   {status === 'error' && (
                     <div className="flex items-center gap-2 p-4 rounded-sm bg-red-50 border border-red-200 text-red-700 text-sm">
                       <AlertCircle className="w-4 h-4 shrink-0" />
-                      Something went wrong. Please try again or email us directly at <a href="mailto:admin@muslimrea.org" className="underline ml-1">admin@muslimrea.org</a>
+                      Something went wrong. Please try again or email us directly at <a href="mailto:info@muslimrea.org" className="underline ml-1">info@muslimrea.org</a>
                     </div>
                   )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

@@ -93,7 +93,7 @@ export default function Terms() {
               ))}
             </div>
             <div className="mt-12 pt-8 border-t border-gray-200">
-              <p className="text-gray-500 text-sm">Questions about these terms? Contact us at <a href="mailto:admin@muslimrea.org" className="underline">admin@muslimrea.org</a>.</p>
+              <p className="text-gray-500 text-sm">Questions about these terms? Contact us at <a href="mailto:info@muslimrea.org" className="underline">info@muslimrea.org</a>.</p>
             </div>
           </div>
         </div>

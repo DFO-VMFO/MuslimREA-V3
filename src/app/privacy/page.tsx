@@ -33,7 +33,7 @@ We do not sell, rent, or trade your personal information to third parties.`,
   },
   {
     title: 'Communications',
-    body: `By joining MREA or subscribing to our mailing list, you consent to receive Association communications. You may unsubscribe at any time using the link in any email, or by contacting us at admin@muslimrea.org.
+    body: `By joining MREA or subscribing to our mailing list, you consent to receive Association communications. You may unsubscribe at any time using the link in any email, or by contacting us at info@muslimrea.org.
 
 MREA does not send unsolicited commercial messages (spam).`,
   },
@@ -54,7 +54,7 @@ MREA does not send unsolicited commercial messages (spam).`,
 - Request deletion of your data (subject to legal retention obligations)
 - Opt out of marketing communications at any time
 
-To exercise these rights, contact us at admin@muslimrea.org.`,
+To exercise these rights, contact us at info@muslimrea.org.`,
   },
   {
     title: 'Changes to This Policy',
@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
                 ))}
               </div>
               <div className="mt-12 pt-8 border-t border-gray-200">
-                <p className="text-gray-500 text-sm">For privacy-related questions, contact us at <a href="mailto:admin@muslimrea.org" className="underline">admin@muslimrea.org</a>.</p>
+                <p className="text-gray-500 text-sm">For privacy-related questions, contact us at <a href="mailto:info@muslimrea.org" className="underline">info@muslimrea.org</a>.</p>
               </div>
             </div>
           </div>
