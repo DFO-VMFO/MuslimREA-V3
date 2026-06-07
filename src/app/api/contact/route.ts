@@ -7,19 +7,12 @@ export async function POST(request: Request) {
     const { name, email, subject, message } = await request.json();
 
     const supabase = getSupabaseClient();
-    if (!supabase) {
-      return NextResponse.json(
-        { error: 'Contact form is not configured yet' },
-        { status: 503 },
-      );
+    if (supabase) {
+      // 1. Save to Supabase (Database) - Optional fallback
+      await supabase
+        .from('contact_submissions')
+        .insert([{ name, email, subject, message }]);
     }
-
-    // 1. Save to Supabase (Database)
-    const { error: dbError } = await supabase
-      .from('contact_submissions')
-      .insert([{ name, email, subject, message }]);
-
-    if (dbError) throw dbError;
 
     const resendApiKey = process.env.RESEND_API_KEY;
     if (!resendApiKey) {
