@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <div className="flex flex-col items-center justify-center h-full py-20 text-center">
                   <CheckCircle className="w-16 h-16 mb-4" style={{ color: theme.gold }} />
                   <h3 className="text-2xl font-serif font-bold mb-3" style={{ color: theme.navy }}>Message Received</h3>
-                  <p className="text-gray-500 max-w-sm">Thank you for reaching out. A member of the MREA team will respond to your inquiry within 2 business days.</p>
+                  <p className="text-gray-500 max-w-sm">Thank you for reaching out. A member of the MREA team has received your message and will be in touch with you shortly.</p>
                   <button onClick={() => { setStatus('idle'); setForm({ name: '', email: '', subject: '', message: '' }); }}
                           className="mt-6 text-sm font-bold hover:underline" style={{ color: theme.gold }}>
                     Send another message
