@@ -15,8 +15,8 @@ const theme = {
 
 const MOCK_EVENTS = [
   { id: 1, title: 'Global Real Estate Summit 2026', date: 'Oct 12-14, 2026', location: 'Dubai, UAE', type: 'Global', tags: ['Institutional', 'Networking'], image: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80&w=800' },
-  { id: 2, title: 'MWIRE Leadership Panel', date: 'Nov 05, 2026', location: 'London Chapter', type: 'Local', tags: ['Women-Only', 'Leadership'], image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800' },
-  { id: 3, title: 'Commercial Deal Room Mixer', date: 'Dec 01, 2026', location: 'Houston Chapter', type: 'Local', tags: ['Deal Room', 'Networking'], image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=800' },
+  { id: 2, title: 'MWREIC Leadership Panel', date: 'Nov 2026', location: 'London Chapter', type: 'Local', tags: ['Women-Only', 'Leadership'], image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800' },
+  { id: 3, title: 'Master Mind coming up, in Irving Texas', date: 'May 2026', location: 'Dallas Chapter', type: 'Local', tags: ['Deal Room', 'Networking'], image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=800' },
 ];
 
 export default function Events() {
@@ -31,7 +31,7 @@ export default function Events() {
             <div className="max-w-3xl mx-auto px-4">
               <h1 className="text-4xl font-serif font-bold mb-4">Event & Education Portal</h1>
               <p className="text-xl text-gray-300">
-                Register for national conventions, local chapter meetups, and exclusive MWIRE panels.
+                Register for national conventions, local chapter meetups, and exclusive MWREIC panels.
               </p>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function Events() {
             {/* Controls */}
             <div className="flex flex-col md:flex-row justify-between items-center mb-10 border-b pb-4">
               <div className="flex space-x-2 mb-4 md:mb-0 bg-slate-100 p-1 rounded-sm">
-                {['All', 'Global', 'Local', 'MWIRE'].map(f => (
+                {['All', 'Global', 'Local', 'MWREIC'].map(f => (
                   <button 
                     key={f}
                     onClick={() => setFilter(f)}
@@ -70,7 +70,7 @@ export default function Events() {
                     <div className="absolute top-4 left-4 flex space-x-2">
                       <span className="bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold" style={{ color: theme.navy }}>{event.type}</span>
                       {event.tags.includes('Women-Only') && (
-                        <span className="bg-pink-100/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-pink-800">MWIRE</span>
+                        <span className="bg-pink-100/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-pink-800">MWREIC</span>
                       )}
                     </div>
                   </div>

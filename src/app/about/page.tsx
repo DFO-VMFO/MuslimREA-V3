@@ -1,7 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, X } from 'lucide-react';
 
 const theme = {
   navy: '#0B1A30',
@@ -11,12 +15,14 @@ const theme = {
 };
 
 const boardMembers = [
-  { name: 'ZuliKha Hussain', title: 'Director / Incorporator', region: 'National' },
+  { name: 'Lady Z – Zulikha Hussain', title: 'Founder and President USA chapter', region: 'National' },
   { name: 'Mohammad Wasif Hussain', title: 'Director', region: 'National' },
   { name: 'Zehra Hussain', title: 'Director', region: 'National' },
 ];
 
 export default function AboutPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="font-sans flex flex-col min-h-screen text-slate-900">
       <Navbar />
@@ -121,12 +127,51 @@ export default function AboutPage() {
                   I invite every Muslim professional — regardless of where you are in your career — to join this movement, serve your local chapter, and help us shape the future of our community&apos;s financial legacy.
                 </p>
                 <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                  <div className="w-14 h-14 rounded-full bg-slate-200 flex items-center justify-center text-xl font-bold" style={{ color: theme.navy }}>ZH</div>
+                  <div 
+                    className="relative w-14 h-14 rounded-full overflow-hidden border border-gray-200 cursor-pointer transition-transform hover:scale-105"
+                    onClick={() => setIsModalOpen(true)}
+                    title="Click to enlarge"
+                  >
+                    <Image
+                      src="https://static.wixstatic.com/media/4b1cfe_ffab587c514744e7a05c533c58e02ac8~mv2.jpg"
+                      alt="Lady Z – Zulikha Hussain"
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
+                  </div>
                   <div>
-                    <div className="font-bold text-lg" style={{ color: theme.navy }}>ZuliKha Hussain</div>
-                    <div className="text-sm text-gray-500 uppercase tracking-wide">Director / Incorporator, MREA</div>
+                    <div className="font-bold text-lg" style={{ color: theme.navy }}>Lady Z – Zulikha Hussain</div>
+                    <div className="text-sm text-gray-500 uppercase tracking-wide">Founder and President USA chapter</div>
                   </div>
                 </div>
+
+                {/* Image Modal Profile Overlay */}
+                {isModalOpen && (
+                  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 transition-all animate-in fade-in zoom-in duration-200" onClick={() => setIsModalOpen(false)}>
+                    <div className="relative max-w-lg w-full">
+                      <button 
+                        className="absolute -top-12 right-0 text-white hover:text-gold transition-colors p-2"
+                        onClick={(e) => { e.stopPropagation(); setIsModalOpen(false); }}
+                      >
+                        <X size={32} />
+                      </button>
+                      <div className="relative aspect-square w-full overflow-hidden rounded-lg shadow-2xl border-2 bg-white" style={{ borderColor: theme.gold }}>
+                        <Image 
+                          src="https://static.wixstatic.com/media/4b1cfe_ffab587c514744e7a05c533c58e02ac8~mv2.jpg"
+                          alt="Lady Z Full Portrait"
+                          fill
+                          className="object-cover"
+                          unoptimized
+                        />
+                      </div>
+                      <div className="mt-4 text-center text-white">
+                        <h3 className="text-2xl font-bold">Lady Z – Zulikha Hussain</h3>
+                        <p className="text-gold">Founder and President USA Chapter</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

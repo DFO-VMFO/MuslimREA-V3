@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { ArrowRight, Building2, Users, DollarSign, BarChart3, Network } from 'lucide-react';
+import { ArrowRight, Building2, Users, DollarSign, BarChart3, Network, Landmark } from 'lucide-react';
 
 const theme = {
   navy: '#0B1A30',
@@ -13,11 +13,11 @@ const theme = {
 const councils = [
   {
     slug: 'mwren',
-    name: 'Muslim Women Real Estate Network',
+    name: 'Muslim Women Real Estate Association',
     icon: <Network size={36} />,
-    tagline: 'The official women\'s professional network of MREA.',
+    tagline: 'The official women\'s professional association of MREA.',
     description:
-      'MWREN is the authorized women\'s division of MREA, dedicated to advancing Muslim women across residential, commercial, and investment real estate. Through mentorship, professional development, and peer community, MWREN ensures Muslim women have a protected, institutional space in the global real estate industry.',
+      'The Muslim Women Real Estate Association is the authorized women\'s division of MREA, dedicated to advancing Muslim women across residential, commercial, and investment real estate. Through mentorship, professional development, and peer community, the Association ensures Muslim women have a protected, institutional space in the global real estate industry.',
     focus: ['Career Advancement & Mentorship', 'Women\'s Leadership Programming', 'Investment Education (Education-Focused)', 'Local Chapter Women\'s Networks'],
     membership: 'All membership tiers',
   },
@@ -39,6 +39,16 @@ const councils = [
     description:
       'The Muslim Developer Council brings together ground-up developers, mixed-use builders, and commercial real estate operators to share intelligence, navigate entitlement challenges, and collaborate on large-scale projects. This council advocates for Muslim developers in policy spaces and national builder coalitions.',
     focus: ['Entitlement & Zoning Advocacy', 'Contractor & Lender Introductions', 'Joint Venture Structuring', 'National Policy Representation'],
+    membership: 'Associate Membership or above',
+  },
+  {
+    slug: 'public-policy-government-affairs-council',
+    name: 'Public Policy & Government Affairs Council',
+    icon: <Landmark size={36} />,
+    tagline: 'Advocating for policy environments where members can thrive.',
+    description:
+      'The Public Policy & Government Affairs Council advances practical policy priorities for the real estate profession, including small business issues affecting real estate professionals and state and local legislation affecting members. Through policy analysis, coalition engagement, and nonpartisan civic education, the council supports housing stability, responsible development, and community-centered growth.',
+    focus: ['Housing affordability initiatives', 'Zoning and land-use reform', 'Property rights', 'Development regulations', 'Housing attainability', 'Economic development'],
     membership: 'Associate Membership or above',
   },
   {
@@ -76,7 +86,7 @@ export default function CouncilsPage() {
             </span>
             <h1 className="text-5xl font-serif font-bold mb-5">MREA Councils</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Four specialized councils connecting professionals, capital, and developers around shared goals — built on ethical leadership and institutional rigor.
+              Specialized councils connecting professionals, capital, and developers around shared goals — built on ethical leadership and institutional rigor.
             </p>
           </div>
         </div>

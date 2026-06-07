@@ -17,7 +17,6 @@ const theme = {
 type SubChapter = {
   id: string;
   name: string;
-  members: number;
   image: string;
   status: 'Active' | 'Launching Soon';
 };
@@ -37,8 +36,8 @@ const NATIONAL_CHAPTERS: NationalChapter[] = [
     region: 'North America',
     nationalId: 'usa',
     subChapters: [
-      { id: 'houston', name: 'Houston, TX', members: 1240, image: 'https://images.unsplash.com/photo-1531218150217-54595bc8bbf9?auto=format&fit=crop&q=80&w=800', status: 'Active' },
-      { id: 'dallas', name: 'Dallas, TX', members: 870, image: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&q=80&w=800', status: 'Active' },
+      { id: 'houston', name: 'Houston, TX', image: 'https://images.unsplash.com/photo-1531218150217-54595bc8bbf9?auto=format&fit=crop&q=80&w=800', status: 'Active' },
+      { id: 'dallas', name: 'Dallas, TX', image: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&q=80&w=800', status: 'Active' },
     ]
   },
   {
@@ -47,7 +46,7 @@ const NATIONAL_CHAPTERS: NationalChapter[] = [
     region: 'North America',
     nationalId: 'canada',
     subChapters: [
-      { id: 'toronto', name: 'Toronto, ON', members: 760, image: 'https://images.unsplash.com/photo-1517090504586-fde19ea6066f?auto=format&fit=crop&q=80&w=800', status: 'Active' },
+      { id: 'toronto', name: 'Toronto, ON', image: 'https://images.unsplash.com/photo-1517090504586-fde19ea6066f?auto=format&fit=crop&q=80&w=800', status: 'Active' },
     ]
   },
   {
@@ -56,7 +55,7 @@ const NATIONAL_CHAPTERS: NationalChapter[] = [
     region: 'Europe',
     nationalId: 'uk',
     subChapters: [
-      { id: 'london', name: 'London', members: 2150, image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=800', status: 'Active' },
+      { id: 'london', name: 'London', image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=800', status: 'Active' },
     ]
   },
   {
@@ -65,14 +64,14 @@ const NATIONAL_CHAPTERS: NationalChapter[] = [
     region: 'Middle East',
     nationalId: 'uae',
     subChapters: [
-      { id: 'dubai', name: 'Dubai', members: 3100, image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800', status: 'Active' },
-      { id: 'abu-dhabi', name: 'Abu Dhabi', members: 540, image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80&w=800', status: 'Launching Soon' },
+      { id: 'dubai', name: 'Dubai', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800', status: 'Active' },
+      { id: 'abu-dhabi', name: 'Abu Dhabi', image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80&w=800', status: 'Launching Soon' },
     ]
   },
 ];
 
 const ADDITIONAL_CHAPTERS: (SubChapter & { country: string; flag: string; region: string })[] = [
-  { id: 'istanbul', name: 'Istanbul', country: 'Turkey', flag: '🇹🇷', region: 'Europe / Asia', members: 1800, image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800', status: 'Active' },
+  { id: 'istanbul', name: 'Istanbul', country: 'Turkey', flag: '🇹🇷', region: 'Europe / Asia', image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800', status: 'Active' },
 ];
 
 export default function Chapters() {
@@ -147,10 +146,6 @@ export default function Chapters() {
                     </h2>
                     <div className="flex items-center gap-4 mt-1 text-sm text-gray-500">
                       <span className="flex items-center gap-1"><Globe size={13}/> {nc.region}</span>
-                      <span className="flex items-center gap-1">
-                        <Users size={13}/>
-                        {nc.subChapters.reduce((s, sc) => s + sc.members, 0).toLocaleString()} total members
-                      </span>
                       <span>{nc.subChapters.length} chapter{nc.subChapters.length !== 1 ? 's' : ''}</span>
                     </div>
                   </div>
@@ -183,9 +178,8 @@ export default function Chapters() {
                       </div>
                       <div className="p-5">
                         <h3 className="text-lg font-serif font-bold mb-1" style={{ color: theme.navy }}>MREA {sc.name}</h3>
-                        <div className="flex items-center text-gray-500 text-sm mb-4">
-                          <Users className="w-3.5 h-3.5 mr-1.5" />
-                          {sc.members.toLocaleString()} Active Members
+                        <div className="mb-4">
+                          {/* Members removed as requested */}
                         </div>
                         <Link href={`/chapters/${sc.id}`} className="flex items-center font-bold text-sm group-hover:gap-2 gap-1 transition-all" style={{ color: theme.gold }}>
                           Visit Chapter Portal <ArrowRight className="w-4 h-4" />
@@ -229,7 +223,6 @@ export default function Chapters() {
                         <h3 className="text-lg font-serif font-bold mb-1" style={{ color: theme.navy }}>MREA {c.name}</h3>
                         <div className="flex items-center gap-3 text-gray-500 text-sm mb-4">
                           <span className="flex items-center gap-1"><Globe size={13}/>{c.region}</span>
-                          <span className="flex items-center gap-1"><Users size={13}/>{c.members.toLocaleString()} members</span>
                         </div>
                         <Link href={`/chapters/${c.id}`} className="flex items-center font-bold text-sm gap-1 group-hover:gap-2 transition-all" style={{ color: theme.gold }}>
                           Visit Chapter Portal <ArrowRight className="w-4 h-4" />

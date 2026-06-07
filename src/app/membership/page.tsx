@@ -34,7 +34,7 @@ const membershipPlans = [
       'Councils access (qualifying tiers)',
       'Chapter event participation',
       'Professional development resources',
-      'MWREN community access'
+      'Muslim Women Real Estate Association access'
     ],
     icon: <Globe size={32} />,
     badge: 'For licensed agents, brokers, and industry professionals'

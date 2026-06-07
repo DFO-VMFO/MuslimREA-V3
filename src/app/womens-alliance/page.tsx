@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
@@ -37,7 +38,28 @@ const pillars = [
   },
 ];
 
+const mwiacPillars = [
+  {
+    title: 'Housing Advocacy',
+    items: ['Single mothers', 'Workforce housing', 'Homeownership access', 'Affordable housing initiatives'],
+  },
+  {
+    title: 'Economic Empowerment',
+    items: ['Entrepreneurship', 'Real estate investing', 'Access to capital', 'Financial literacy'],
+  },
+  {
+    title: 'Leadership Development',
+    items: ['Board appointments', 'Commission appointments', 'Public service', 'Civic leadership'],
+  },
+  {
+    title: 'Government Relations',
+    items: ['Meeting elected officials', 'Legislative education', 'Policy recommendations', 'Candidate forums (nonpartisan)'],
+  },
+];
+
 export default function WomensAlliancePage() {
+  const [openPillar, setOpenPillar] = useState(mwiacPillars[0].title);
+
   return (
     <div className="font-sans flex flex-col min-h-screen text-slate-900">
       <Navbar />
@@ -66,15 +88,25 @@ export default function WomensAlliancePage() {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Elevating Muslim women across every dimension of real estate — from first-time agents to institutional investors and community developers.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/membership" className="px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5 inline-block"
+            <div className="flex flex-col items-center gap-4">
+              <Link href="/membership" className="w-full max-w-xs text-center px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5 inline-block"
                     style={{ backgroundColor: theme.gold, color: theme.navy }}>
                 Join MWREA
               </Link>
-              <a href="#investment-club" className="px-8 py-3 rounded-sm font-bold text-lg text-white border-2 transition hover:bg-white/10"
-                 style={{ borderColor: 'rgba(255,255,255,0.3)' }}>
-                Investment Club
-              </a>
+              <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="#investment-club" className="w-full text-center px-8 py-3 rounded-sm font-bold text-lg text-white border-2 transition hover:bg-white/10"
+                   style={{ borderColor: 'rgba(255,255,255,0.3)' }}>
+                  Investment Club
+                </a>
+                <a href="#advocacy-council" className="w-full text-center px-8 py-3 rounded-sm font-bold text-lg text-white border-2 transition hover:bg-white/10"
+                   style={{ borderColor: 'rgba(255,255,255,0.3)' }}>
+                  Advocacy Council
+                </a>
+                <Link href="/events" className="w-full text-center px-8 py-3 rounded-sm font-bold text-lg text-white border-2 transition hover:bg-white/10"
+                      style={{ borderColor: 'rgba(255,255,255,0.3)' }}>
+                  Events
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -154,6 +186,70 @@ export default function WomensAlliancePage() {
                     {area}
                   </li>
                 ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Impact & Advocacy Council */}
+        <div id="advocacy-council" className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>
+                MWREA Sub-Division
+              </span>
+              <h2 className="text-3xl font-serif font-bold mb-5" style={{ color: theme.navy }}>
+                Muslim Women Impact &amp; Advocacy Council (MWIAC)
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                The Muslim Women Impact &amp; Advocacy Council advances housing opportunity, economic empowerment, professional development, and community leadership by educating policymakers, engaging stakeholders, and advocating for policies that strengthen families, expand homeownership, and support sustainable community development.
+              </p>
+              <p className="text-gray-500 text-sm italic mb-8 border-l-4 pl-4" style={{ borderColor: theme.gold }}>
+                Designed for a 501(c)(6) trade association framework, MWIAC programming is policy-education and stakeholder-engagement focused, and does not involve partisan campaign activity.
+              </p>
+              <div className="flex gap-4">
+                <Link href="/membership" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-sm transition hover:opacity-90"
+                      style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                  Apply for Membership <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-sm transition border hover:bg-white/5"
+                      style={{ borderColor: theme.navy, color: theme.navy }}>
+                  Connect with MWIAC <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-slate-900 rounded-sm p-10 text-white">
+              <h4 className="font-bold text-xl mb-6 font-serif" style={{ color: theme.gold }}>Council Pillars</h4>
+              <ul className="space-y-4">
+                {mwiacPillars.map((pillar) => {
+                  const isOpen = openPillar === pillar.title;
+
+                  return (
+                    <li key={pillar.title}>
+                      <button
+                        type="button"
+                        onClick={() => setOpenPillar(isOpen ? '' : pillar.title)}
+                        className="w-full flex items-center gap-3 text-sm text-gray-300 hover:text-white transition text-left"
+                        aria-expanded={isOpen}
+                        suppressHydrationWarning
+                      >
+                        <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: theme.gold }}></div>
+                        <span>{pillar.title}</span>
+                      </button>
+                      {isOpen && (
+                        <ul className="mt-2 ml-5 space-y-2">
+                          {pillar.items.map((item) => (
+                            <li key={item} className="flex items-center gap-3 text-sm text-gray-400">
+                              <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: theme.gold }}></div>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
