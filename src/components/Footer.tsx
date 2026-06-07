@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Building } from 'lucide-react';
+import NewsletterForm from './NewsletterForm';
 
 const theme = {
   navy: '#0B1A30',
@@ -69,18 +70,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-4 uppercase text-xs tracking-widest" style={{ color: theme.gold }}>Stay Connected</h4>
           <p className="text-gray-400 text-xs mb-4 leading-relaxed">Get chapter updates, event invitations, and research delivered to your inbox.</p>
-          <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full px-3 py-2 rounded-sm text-sm text-gray-900 focus:outline-none"
-              suppressHydrationWarning
-            />
-            <button type="submit" suppressHydrationWarning className="w-full py-2 rounded-sm text-sm font-bold transition hover:opacity-90"
-                    style={{ backgroundColor: theme.gold, color: theme.navy }}>
-              Join Mailing List
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </div>
 

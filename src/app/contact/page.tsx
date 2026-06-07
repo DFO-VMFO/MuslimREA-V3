@@ -97,9 +97,9 @@ export default function ContactPage() {
                 <h4 className="font-bold text-sm uppercase tracking-wider mb-4" style={{ color: theme.gold }}>Quick Contacts</h4>
                 <ul className="space-y-3 text-sm text-gray-300">
                   <li><span className="font-semibold text-white">Membership:</span><br />admin@muslimrea.org</li>
-                  <li><span className="font-semibold text-white">Press & Media:</span><br />press@muslimrea.org</li>
-                  <li><span className="font-semibold text-white">Women&apos;s Alliance:</span><br />mwrea@muslimrea.org</li>
-                  <li><span className="font-semibold text-white">Chapter Inquiries:</span><br />chapters@muslimrea.org</li>
+                  <li><span className="font-semibold text-white">Press & Media:</span><br />admin@muslimrea.org</li>
+                  <li><span className="font-semibold text-white">Women&apos;s Alliance:</span><br />admin@muslimrea.org</li>
+                  <li><span className="font-semibold text-white">Chapter Inquiries:</span><br />admin@muslimrea.org</li>
                 </ul>
               </div>
             </div>

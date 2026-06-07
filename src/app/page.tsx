@@ -1,8 +1,8 @@
 'use client';
 
-import type { CSSProperties } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import NewsletterForm from '@/components/NewsletterForm';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Briefcase, Globe, Shield, ArrowRight, Users } from 'lucide-react';
@@ -191,19 +191,7 @@ export default function Home() {
           <div className="max-w-xl mx-auto px-4 text-center">
             <h3 className="text-2xl font-serif font-bold mb-2" style={{ color: theme.navy }}>Stay Informed</h3>
             <p className="text-gray-500 mb-6 text-sm">Get chapter updates, event invitations, and industry research delivered to your inbox.</p>
-            <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-1 text-sm"
-                suppressHydrationWarning
-                style={{ '--tw-ring-color': theme.gold } as CSSProperties}
-              />
-              <button type="submit" suppressHydrationWarning className="px-6 py-3 rounded-sm font-bold text-sm transition hover:opacity-90 whitespace-nowrap"
-                      style={{ backgroundColor: theme.navy, color: 'white' }}>
-                Join Mailing List
-              </button>
-            </form>
+            <NewsletterForm variant="row" />
           </div>
         </div>
       </main>
