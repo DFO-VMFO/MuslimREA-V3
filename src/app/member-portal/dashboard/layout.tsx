@@ -39,7 +39,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       if (!session) {
         router.replace('/member-portal');
       } else {
-        const isAdmin = session.user.user_metadata?.role === 'admin' || session.user.email?.endsWith('@muslimrea.org');
+        const isAdmin = !!(session.user.user_metadata?.role === 'admin' || session.user.email?.endsWith('@muslimrea.org'));
         setMember({
           name:
             session.user.user_metadata?.full_name ||

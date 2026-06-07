@@ -110,7 +110,7 @@ export default function MemberManagement() {
                   {selectedApp.name.charAt(0)}
                 </div>
                 <h3 className="font-serif font-bold text-lg" style={{ color: theme.navy }}>{selectedApp.name}</h3>
-                <p className="text-xs text-gray-500 mt-1">{selectedApp.title || 'Applicant'}</p>
+                <p className="text-xs text-gray-500 mt-1">{selectedApp.company}</p>
                 <div className="mt-4 flex flex-wrap justify-center gap-2">
                   <span className="px-2 py-1 rounded text-[10px] font-bold bg-navy text-white" style={{ backgroundColor: theme.navy }}>
                     {selectedApp.tier}
