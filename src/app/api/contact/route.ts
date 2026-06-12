@@ -26,13 +26,14 @@ export async function POST(request: Request) {
 
     // 2. Send Email Notification via Resend (Direct to your inbox)
     try {
+      const recipients = debug ? ['admin@muslimrea.org', email] : ['admin@muslimrea.org'];
       const resp = await resend.emails.send({
-        from: 'MREA Contact Form <onboarding@resend.dev>', // You can update this after domain verification
-        to: ['admin@muslimrea.org'],
+        from: 'MREA Contact Form <onboarding@resend.dev>', // Update after domain verification
+        to: recipients,
         subject: `New MREA Inquiry: ${subject}`,
         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       });
-      console.info('Contact email sent', { id: resp.id });
+      console.info('Contact email sent', { id: resp.id, recipients });
     } catch (err: any) {
       console.error('Resend send error:', err);
       return NextResponse.json(
@@ -43,7 +44,7 @@ export async function POST(request: Request) {
 
     // If the sender requested debug info, return the Resend message id
     if (debug) {
-      return NextResponse.json({ success: true, messageId: (await resend.emails.list({ limit: 1 })).data?.[0]?.id || null });
+      return NextResponse.json({ success: true, messageId: resp.id || null });
     }
 
     return NextResponse.json({ success: true });
