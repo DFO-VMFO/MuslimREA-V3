@@ -25,12 +25,21 @@ export async function POST(request: Request) {
     const resend = new Resend(resendApiKey);
 
     // 2. Send Email Notification via Resend (Direct to your inbox)
-    await resend.emails.send({
-      from: 'MREA Contact Form <onboarding@resend.dev>', // You can update this after domain verification
-      to: ['admin@muslimrea.org'],
-      subject: `New MREA Inquiry: ${subject}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-    });
+    try {
+      const resp = await resend.emails.send({
+        from: 'MREA Contact Form <onboarding@resend.dev>', // You can update this after domain verification
+        to: ['admin@muslimrea.org'],
+        subject: `New MREA Inquiry: ${subject}`,
+        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      });
+      console.info('Contact email sent', { id: resp.id });
+    } catch (err: any) {
+      console.error('Resend send error:', err);
+      return NextResponse.json(
+        { error: 'Failed to send email', details: String(err?.message || err) },
+        { status: 500 },
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
