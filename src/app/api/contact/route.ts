@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   try {
-    const { name, email, subject, message } = await request.json();
+    const { name, email, subject, message, debug } = await request.json();
 
     const supabase = getSupabaseClient();
     if (supabase) {
@@ -39,6 +39,11 @@ export async function POST(request: Request) {
         { error: 'Failed to send email', details: String(err?.message || err) },
         { status: 500 },
       );
+    }
+
+    // If the sender requested debug info, return the Resend message id
+    if (debug) {
+      return NextResponse.json({ success: true, messageId: (await resend.emails.list({ limit: 1 })).data?.[0]?.id || null });
     }
 
     return NextResponse.json({ success: true });
