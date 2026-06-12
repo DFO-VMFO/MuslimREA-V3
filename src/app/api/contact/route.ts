@@ -25,6 +25,7 @@ export async function POST(request: Request) {
     const resend = new Resend(resendApiKey);
 
     // 2. Send Email Notification via Resend (Direct to your inbox)
+    let messageId: string | null = null;
     try {
       const recipients = debug ? ['admin@muslimrea.org', email] : ['admin@muslimrea.org'];
       const resp = await resend.emails.send({
@@ -33,7 +34,8 @@ export async function POST(request: Request) {
         subject: `New MREA Inquiry: ${subject}`,
         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       });
-      console.info('Contact email sent', { id: resp.id, recipients });
+      messageId = (resp as any)?.id || null;
+      console.info('Contact email sent', { id: messageId, recipients });
     } catch (err: any) {
       console.error('Resend send error:', err);
       return NextResponse.json(
@@ -44,7 +46,7 @@ export async function POST(request: Request) {
 
     // If the sender requested debug info, return the Resend message id
     if (debug) {
-      return NextResponse.json({ success: true, messageId: resp.id || null });
+      return NextResponse.json({ success: true, messageId });
     }
 
     return NextResponse.json({ success: true });
