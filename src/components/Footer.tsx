@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Building } from 'lucide-react';
+import Image from 'next/image';
 import NewsletterForm from './NewsletterForm';
 
 const theme = {
@@ -17,11 +17,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="md:col-span-2">
           <div className="flex items-center mb-4">
-            <Building className="h-6 w-6 mr-2" style={{ color: theme.gold }} />
-            <div>
-              <div className="font-serif text-xl font-bold tracking-widest">MREA</div>
-              <div className="text-[9px] tracking-[0.2em] uppercase" style={{ color: theme.gold }}>Global Network</div>
-            </div>
+            <Image src="/logo.png" alt="MREA logo" width={120} height={38} className="mr-3 object-contain" priority />
           </div>
           <p className="text-gray-400 text-sm mb-4 leading-relaxed max-w-xs">A 501(c)(6) trade association dedicated to empowering Muslim real estate professionals worldwide through ethical leadership, advocacy, and community.</p>
           <p className="text-xs text-gray-600 mb-1">&copy; {new Date().getFullYear()} Muslim Real Estate Association, a Texas Nonprofit Corporation.</p>

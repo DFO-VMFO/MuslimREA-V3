@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Building, Menu, X, ChevronDown, Lock } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, ChevronDown, Lock } from 'lucide-react';
 
 const theme = {
   navy: '#0B1A30',
@@ -75,11 +76,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <Building className="h-8 w-8 mr-2" style={{ color: theme.gold }} />
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-xl font-bold text-white tracking-widest">MREA</span>
-                <span className="text-[9px] tracking-[0.2em] uppercase" style={{ color: theme.gold }}>Global Network</span>
-              </div>
+              <Image src="/logo.png" alt="MREA logo" width={140} height={44} className="mr-3 object-contain" priority />
             </Link>
           </div>
 
