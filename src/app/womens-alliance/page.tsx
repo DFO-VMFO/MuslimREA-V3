@@ -8,10 +8,11 @@ import Link from 'next/link';
 import { ArrowRight, Users, BookOpen, TrendingUp, Heart } from 'lucide-react';
 
 const theme = {
-  navy: '#0D3918',
-  gold: '#7CB342',
-  charcoal: '#2D2D2D',
-  lightGray: '#F5F7FA',
+  darkCharcoal: '#1A1A1A',
+  gold: '#D4AF37',
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6',
   rose: '#8B2252',
 };
 
@@ -76,7 +77,7 @@ export default function WomensAlliancePage() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0" style={{ backgroundColor: theme.navy, opacity: 0.88 }}></div>
+            <div className="absolute inset-0" style={{ backgroundColor: theme.darkCharcoal, opacity: 0.88 }}></div>
           </div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <span className="uppercase tracking-[0.25em] text-xs font-bold block mb-4" style={{ color: theme.gold }}>
@@ -90,7 +91,7 @@ export default function WomensAlliancePage() {
             </p>
             <div className="flex flex-col items-center gap-4">
               <Link href="/membership" className="w-full max-w-xs text-center px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5 inline-block"
-                    style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                    style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
                 Join MWREA
               </Link>
               <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -114,27 +115,27 @@ export default function WomensAlliancePage() {
         {/* Mission Strip */}
         <div style={{ backgroundColor: theme.gold }}>
           <div className="max-w-4xl mx-auto px-4 py-4 text-center">
-            <p className="font-bold text-sm uppercase tracking-[0.2em]" style={{ color: theme.navy }}>
+            <p className="font-bold text-sm uppercase tracking-[0.2em]" style={{ color: theme.darkCharcoal }}>
               MWREA — Protecting and expanding the space for Muslim women in global real estate
             </p>
           </div>
         </div>
 
         {/* Four Pillars */}
-        <div className="py-24" style={{ backgroundColor: theme.lightGray }}>
+        <div className="py-24" style={{ backgroundColor: theme.lightBg }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>What the Alliance Offers</h2>
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.darkCharcoal }}>What the Alliance Offers</h2>
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {pillars.map((p, i) => (
                 <div key={i} className="bg-white p-8 rounded shadow-md border border-gray-100 flex gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.darkCharcoal}10`, color: theme.darkCharcoal }}>
                     {p.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2" style={{ color: theme.navy }}>{p.title}</h3>
+                    <h3 className="text-lg font-bold mb-2" style={{ color: theme.darkCharcoal }}>{p.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
                   </div>
                 </div>
@@ -150,7 +151,7 @@ export default function WomensAlliancePage() {
               <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>
                 MWREA Sub-Division
               </span>
-              <h2 className="text-3xl font-serif font-bold mb-5" style={{ color: theme.navy }}>
+              <h2 className="text-3xl font-serif font-bold mb-5" style={{ color: theme.darkCharcoal }}>
                 Muslim Women Real Estate Investment Club
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -164,7 +165,7 @@ export default function WomensAlliancePage() {
               </p>
               <div className="flex gap-4">
                 <Link href="/membership" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-sm transition hover:opacity-90"
-                      style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                      style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
                   Apply for Membership <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -198,7 +199,7 @@ export default function WomensAlliancePage() {
               <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>
                 MWREA Sub-Division
               </span>
-              <h2 className="text-3xl font-serif font-bold mb-5" style={{ color: theme.navy }}>
+              <h2 className="text-3xl font-serif font-bold mb-5" style={{ color: theme.darkCharcoal }}>
                 Muslim Women Impact &amp; Advocacy Council (MWIAC)
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -209,11 +210,11 @@ export default function WomensAlliancePage() {
               </p>
               <div className="flex gap-4">
                 <Link href="/membership" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-sm transition hover:opacity-90"
-                      style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                      style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
                   Apply for Membership <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-sm transition border hover:bg-white/5"
-                      style={{ borderColor: theme.navy, color: theme.navy }}>
+                      style={{ borderColor: theme.darkCharcoal, color: theme.darkCharcoal }}>
                   Connect with MWIAC <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -256,7 +257,7 @@ export default function WomensAlliancePage() {
         </div>
 
         {/* Leadership Spotlight */}
-        <div className="py-20" style={{ backgroundColor: theme.navy }}>
+        <div className="py-20" style={{ backgroundColor: theme.darkCharcoal }}>
           <div className="max-w-3xl mx-auto px-4 text-center">
             <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Leadership</span>
             <h2 className="text-3xl font-serif font-bold text-white mb-5">Join a Movement Already in Motion</h2>
@@ -264,7 +265,7 @@ export default function WomensAlliancePage() {
               MWREA chapters are launching across North America, the Middle East, and Europe. Whether you&apos;re a licensed agent, an investor, a developer, or just beginning your journey — the Alliance is your professional home.
             </p>
             <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3 rounded-sm font-bold transition hover:opacity-90"
-                  style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                  style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
               Connect with Alliance Leadership <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -273,12 +274,12 @@ export default function WomensAlliancePage() {
         {/* Mailing List */}
         <div className="py-14 bg-white border-t border-gray-100 text-center">
           <div className="max-w-lg mx-auto px-4">
-            <h3 className="text-xl font-serif font-bold mb-2" style={{ color: theme.navy }}>Stay Connected with MWREA</h3>
+            <h3 className="text-xl font-serif font-bold mb-2" style={{ color: theme.darkCharcoal }}>Stay Connected with MWREA</h3>
             <p className="text-gray-500 mb-5 text-sm">Join the mailing list for events, mentorship opportunities, and investment education updates.</p>
             <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
               <input type="email" placeholder="Your email address" className="flex-1 px-4 py-3 border border-gray-300 rounded-sm text-sm focus:outline-none focus:ring-2" suppressHydrationWarning />
               <button type="submit" suppressHydrationWarning className="px-6 py-3 rounded-sm font-bold text-sm whitespace-nowrap"
-                      style={{ backgroundColor: theme.navy, color: 'white' }}>
+                      style={{ backgroundColor: theme.darkCharcoal, color: 'white' }}>
                 Subscribe
               </button>
             </form>

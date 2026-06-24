@@ -5,10 +5,11 @@ import Link from 'next/link';
 import { ChevronRight, Calendar } from 'lucide-react';
 
 const theme = {
-  navy: '#0D3918',
-  gold: '#7CB342',
-  charcoal: '#2D2D2D',
-  lightGray: '#F5F7FA'
+  darkCharcoal: '#1A1A1A',
+  gold: '#D4AF37',
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6'
 };
 
 // All chapter slugs — kept in sync with chapters/page.tsx
@@ -65,7 +66,7 @@ export default async function ChapterDetail({ params }: PageProps) {
                 sizes="100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0" style={{ backgroundColor: theme.navy, opacity: 0.9 }}></div>
+              <div className="absolute inset-0" style={{ backgroundColor: theme.darkCharcoal, opacity: 0.9 }}></div>
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <Link href="/chapters" className="text-gray-300 hover:text-white flex items-center mb-6 text-sm uppercase tracking-wider font-bold">
@@ -84,7 +85,7 @@ export default async function ChapterDetail({ params }: PageProps) {
                     Contact Board
                   </button>
                   <button className="px-6 py-2 rounded-sm font-bold transition shadow-lg" 
-                          style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                          style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
                     Join Chapter
                   </button>
                 </div>
@@ -97,7 +98,7 @@ export default async function ChapterDetail({ params }: PageProps) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex space-x-8">
               {['Overview', 'Local Board', 'Events', 'Sponsors'].map((tab, i) => (
                 <button key={i} className={`py-4 font-bold text-sm uppercase tracking-wide border-b-2 ${i === 0 ? 'border-blue-900 text-blue-900' : 'border-transparent text-gray-500 hover:text-gray-900'}`}
-                        style={i===0 ? { borderColor: theme.navy, color: theme.navy } : {}}>
+                        style={i===0 ? { borderColor: theme.darkCharcoal, color: theme.darkCharcoal } : {}}>
                   {tab}
                 </button>
               ))}
@@ -107,12 +108,12 @@ export default async function ChapterDetail({ params }: PageProps) {
           {/* Chapter Content Area */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-serif font-bold mb-6" style={{ color: theme.navy }}>Welcome to MREA {chapter.name}</h2>
+              <h2 className="text-2xl font-serif font-bold mb-6" style={{ color: theme.darkCharcoal }}>Welcome to MREA {chapter.name}</h2>
               <p className="text-gray-600 mb-8 leading-relaxed text-lg">
                 As a premier hub within the global network, the {chapter.name} chapter connects top-tier developers, brokers, and institutional investors in the {chapter.region} market. Our focus is on high-capital development, international cross-border investments, and fostering the next generation of real estate leadership.
               </p>
 
-              <h3 className="text-xl font-bold mb-6 mt-12 border-b pb-2" style={{ color: theme.navy, borderColor: theme.gold }}>Upcoming Local Events</h3>
+              <h3 className="text-xl font-bold mb-6 mt-12 border-b pb-2" style={{ color: theme.darkCharcoal, borderColor: theme.gold }}>Upcoming Local Events</h3>
               <div className="space-y-4">
                 {MOCK_EVENTS.filter(e => e.location.includes(chapter.name)).map(event => (
                   <div key={event.id} className="flex flex-col sm:flex-row border border-gray-100 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition bg-white">
@@ -131,7 +132,7 @@ export default async function ChapterDetail({ params }: PageProps) {
                           <span key={tag} className="text-xs font-bold px-2 py-1 rounded bg-slate-100 text-slate-600 uppercase tracking-wider">{tag}</span>
                         ))}
                       </div>
-                      <h4 className="font-bold text-lg mb-1" style={{ color: theme.navy }}>{event.title}</h4>
+                      <h4 className="font-bold text-lg mb-1" style={{ color: theme.darkCharcoal }}>{event.title}</h4>
                       <div className="flex items-center text-sm text-gray-500">
                         <Calendar className="w-4 h-4 mr-1" /> {event.date}
                       </div>
@@ -147,7 +148,7 @@ export default async function ChapterDetail({ params }: PageProps) {
             {/* Sidebar */}
             <div className="space-y-8">
               <div className="bg-slate-50 p-6 rounded-sm border border-slate-100">
-                <h3 className="font-bold uppercase tracking-wider text-sm mb-4" style={{ color: theme.navy }}>Chapter Leadership</h3>
+                <h3 className="font-bold uppercase tracking-wider text-sm mb-4" style={{ color: theme.darkCharcoal }}>Chapter Leadership</h3>
                 <div className="space-y-4">
                   {[
                     { role: 'President', name: 'Omar Al-Fayed' },
@@ -159,13 +160,13 @@ export default async function ChapterDetail({ params }: PageProps) {
                         {member.name.charAt(0)}
                       </div>
                       <div>
-                        <div className="font-bold text-sm" style={{ color: theme.navy }}>{member.name}</div>
+                        <div className="font-bold text-sm" style={{ color: theme.darkCharcoal }}>{member.name}</div>
                         <div className="text-xs text-gray-500 uppercase">{member.role}</div>
                       </div>
                     </div>
                   ))}
                 </div>
-                <button className="w-full mt-6 py-2 text-sm font-bold border rounded hover:bg-white transition" style={{ borderColor: theme.navy, color: theme.navy }}>View Full Board</button>
+                <button className="w-full mt-6 py-2 text-sm font-bold border rounded hover:bg-white transition" style={{ borderColor: theme.darkCharcoal, color: theme.darkCharcoal }}>View Full Board</button>
               </div>
 
               <div className="bg-slate-900 p-6 rounded-sm text-white">

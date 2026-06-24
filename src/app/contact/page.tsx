@@ -6,10 +6,11 @@ import Footer from '@/components/Footer';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const theme = {
-  navy: '#0D3918',
-  gold: '#7CB342',
-  charcoal: '#2D2D2D',
-  lightGray: '#F5F7FA',
+  darkCharcoal: '#1A1A1A',
+  gold: '#D4AF37',
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6',
 };
 
 export default function ContactPage() {
@@ -42,7 +43,7 @@ export default function ContactPage() {
       <main className="flex-grow">
 
         {/* Header */}
-        <div className="py-20 text-white" style={{ backgroundColor: theme.navy }}>
+        <div className="py-20 text-white" style={{ backgroundColor: theme.darkCharcoal }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="uppercase tracking-[0.25em] text-xs font-bold block mb-4" style={{ color: theme.gold }}>
               Get in Touch
@@ -61,32 +62,32 @@ export default function ContactPage() {
             {/* Sidebar */}
             <div className="space-y-8">
               <div>
-                <h3 className="font-bold text-lg mb-5" style={{ color: theme.navy }}>Office Information</h3>
+                <h3 className="font-bold text-lg mb-5" style={{ color: theme.darkCharcoal }}>Office Information</h3>
                 <div className="space-y-5">
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.darkCharcoal}10`, color: theme.darkCharcoal }}>
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-semibold text-sm mb-1" style={{ color: theme.navy }}>National Headquarters</div>
+                      <div className="font-semibold text-sm mb-1" style={{ color: theme.darkCharcoal }}>National Headquarters</div>
                       <div className="text-sm text-gray-500">United States<br />Chapter locations across various cities</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.darkCharcoal}10`, color: theme.darkCharcoal }}>
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-semibold text-sm mb-1" style={{ color: theme.navy }}>Email</div>
+                      <div className="font-semibold text-sm mb-1" style={{ color: theme.darkCharcoal }}>Email</div>
                       <a href="mailto:info@muslimrea.org" className="text-sm text-gray-500 hover:underline">info@muslimrea.org</a>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${theme.darkCharcoal}10`, color: theme.darkCharcoal }}>
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-semibold text-sm mb-1" style={{ color: theme.navy }}>Phone</div>
+                      <div className="font-semibold text-sm mb-1" style={{ color: theme.darkCharcoal }}>Phone</div>
                       <div className="text-sm text-gray-500">Available to members via Member Portal</div>
                     </div>
                   </div>
@@ -109,7 +110,7 @@ export default function ContactPage() {
               {status === 'success' ? (
                 <div className="flex flex-col items-center justify-center h-full py-20 text-center">
                   <CheckCircle className="w-16 h-16 mb-4" style={{ color: theme.gold }} />
-                  <h3 className="text-2xl font-serif font-bold mb-3" style={{ color: theme.navy }}>Message Received</h3>
+                  <h3 className="text-2xl font-serif font-bold mb-3" style={{ color: theme.darkCharcoal }}>Message Received</h3>
                   <p className="text-gray-500 max-w-sm">Thank you for reaching out. A member of the MREA team has received your message and will be in touch with you shortly.</p>
                   <button onClick={() => { setStatus('idle'); setForm({ name: '', email: '', subject: '', message: '' }); }}
                           className="mt-6 text-sm font-bold hover:underline" style={{ color: theme.gold }}>
@@ -126,7 +127,7 @@ export default function ContactPage() {
                   )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold mb-2" style={{ color: theme.navy }}>Full Name <span className="text-red-500">*</span></label>
+                      <label className="block text-sm font-semibold mb-2" style={{ color: theme.darkCharcoal }}>Full Name <span className="text-red-500">*</span></label>
                       <input
                         type="text"
                         required
@@ -137,7 +138,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold mb-2" style={{ color: theme.navy }}>Email Address <span className="text-red-500">*</span></label>
+                      <label className="block text-sm font-semibold mb-2" style={{ color: theme.darkCharcoal }}>Email Address <span className="text-red-500">*</span></label>
                       <input
                         type="email"
                         required
@@ -150,7 +151,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2" style={{ color: theme.navy }}>Subject <span className="text-red-500">*</span></label>
+                    <label className="block text-sm font-semibold mb-2" style={{ color: theme.darkCharcoal }}>Subject <span className="text-red-500">*</span></label>
                     <select
                       required
                       value={form.subject}
@@ -169,7 +170,7 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2" style={{ color: theme.navy }}>Message <span className="text-red-500">*</span></label>
+                    <label className="block text-sm font-semibold mb-2" style={{ color: theme.darkCharcoal }}>Message <span className="text-red-500">*</span></label>
                     <textarea
                       required
                       rows={6}
@@ -181,7 +182,7 @@ export default function ContactPage() {
                   </div>
                   <button type="submit" suppressHydrationWarning disabled={status === 'submitting'}
                           className="flex items-center gap-2 px-8 py-3 rounded-sm font-bold text-sm transition hover:opacity-90 disabled:opacity-60"
-                          style={{ backgroundColor: theme.navy, color: 'white' }}>
+                          style={{ backgroundColor: theme.darkCharcoal, color: 'white' }}>
                     <Send className="w-4 h-4" /> {status === 'submitting' ? 'Sending…' : 'Send Message'}
                   </button>
                 </form>

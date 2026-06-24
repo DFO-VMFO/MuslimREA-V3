@@ -5,14 +5,15 @@ import Image from 'next/image';
 import NewsletterForm from './NewsletterForm';
 
 const theme = {
-  navy: '#0D3918',
-  gold: '#7CB342',
-  charcoal: '#2D2D2D',
+  darkCharcoal: '#1A1A1A',
+  gold: '#D4AF37',
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
 };
 
 export default function Footer() {
   return (
-    <footer className="text-white py-14" style={{ backgroundColor: theme.charcoal }}>
+    <footer className="text-white py-14" style={{ backgroundColor: theme.darkCharcoal, borderTop: `3px solid ${theme.gold}` }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-6 gap-8">
         {/* Brand */}
         <div className="md:col-span-2">
@@ -70,12 +71,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-gray-700 text-xs text-gray-600 flex flex-col md:flex-row justify-between gap-3">
-        <p>Muslim Real Estate Association, a Texas Nonprofit Corporation. 501(c)(6) Trade Association. All rights reserved.</p>
-        <div className="flex gap-4">
-          <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
-          <Link href="/ethics" className="hover:text-white transition">Ethics & Standards</Link>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6" style={{ borderTop: `1px solid ${theme.mediumGreen}` }}>
+        <div className="text-xs text-gray-600 flex flex-col md:flex-row justify-between gap-3">
+          <p>Muslim Real Estate Association, a Texas Nonprofit Corporation. 501(c)(6) Trade Association. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
+            <Link href="/ethics" className="hover:text-white transition">Ethics & Standards</Link>
+          </div>
         </div>
       </div>
     </footer>

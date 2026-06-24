@@ -8,10 +8,11 @@ import Link from 'next/link';
 import { Users, ArrowRight, Search, Globe } from 'lucide-react';
 
 const theme = {
-  navy: '#0D3918',
-  gold: '#7CB342',
-  charcoal: '#2D2D2D',
-  lightGray: '#F5F7FA'
+  darkCharcoal: '#1A1A1A',
+  gold: '#D4AF37',
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6'
 };
 
 type SubChapter = {
@@ -101,10 +102,10 @@ export default function Chapters() {
     <div className="font-sans flex flex-col min-h-screen text-slate-900">
       <Navbar />
       <main className="flex-grow">
-        <div className="min-h-screen pb-24" style={{ backgroundColor: theme.lightGray }}>
+        <div className="min-h-screen pb-24" style={{ backgroundColor: theme.lightBg }}>
 
           {/* Hero */}
-          <div style={{ backgroundColor: theme.navy }} className="py-16 text-white">
+          <div style={{ backgroundColor: theme.darkCharcoal }} className="py-16 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <span className="text-xs uppercase tracking-[0.2em] font-bold block mb-3" style={{ color: theme.gold }}>Global Federation</span>
               <h1 className="text-4xl font-serif font-bold mb-2">MREA International</h1>
@@ -141,7 +142,7 @@ export default function Chapters() {
                 <div className="flex items-center gap-4 mb-6 pb-4 border-b-2" style={{ borderColor: theme.gold }}>
                   <span className="text-4xl">{nc.flag}</span>
                   <div>
-                    <h2 className="text-2xl font-serif font-bold" style={{ color: theme.navy }}>
+                    <h2 className="text-2xl font-serif font-bold" style={{ color: theme.darkCharcoal }}>
                       MREA {nc.country} — National Chapter
                     </h2>
                     <div className="flex items-center gap-4 mt-1 text-sm text-gray-500">
@@ -169,15 +170,15 @@ export default function Chapters() {
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute top-3 right-3 px-2 py-0.5 rounded text-xs font-bold shadow"
-                          style={{ backgroundColor: sc.status === 'Active' ? theme.gold : '#94a3b8', color: sc.status === 'Active' ? theme.navy : 'white' }}>
+                          style={{ backgroundColor: sc.status === 'Active' ? theme.gold : '#94a3b8', color: sc.status === 'Active' ? theme.darkCharcoal : 'white' }}>
                           {sc.status}
                         </div>
-                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-0.5 rounded text-xs font-bold shadow" style={{ color: theme.navy }}>
+                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-0.5 rounded text-xs font-bold shadow" style={{ color: theme.darkCharcoal }}>
                           {nc.flag} {nc.country}
                         </div>
                       </div>
                       <div className="p-5">
-                        <h3 className="text-lg font-serif font-bold mb-1" style={{ color: theme.navy }}>MREA {sc.name}</h3>
+                        <h3 className="text-lg font-serif font-bold mb-1" style={{ color: theme.darkCharcoal }}>MREA {sc.name}</h3>
                         <div className="mb-4">
                           {/* Members removed as requested */}
                         </div>
@@ -194,10 +195,10 @@ export default function Chapters() {
             {/* Additional / Global Chapters */}
             {filteredAdditional.length > 0 && (
               <section>
-                <div className="flex items-center gap-4 mb-6 pb-4 border-b-2" style={{ borderColor: `${theme.navy}30` }}>
+                <div className="flex items-center gap-4 mb-6 pb-4 border-b-2" style={{ borderColor: `${theme.darkCharcoal}30` }}>
                   <span className="text-4xl">🌍</span>
                   <div>
-                    <h2 className="text-2xl font-serif font-bold" style={{ color: theme.navy }}>Expanding Global Presence</h2>
+                    <h2 className="text-2xl font-serif font-bold" style={{ color: theme.darkCharcoal }}>Expanding Global Presence</h2>
                     <p className="text-sm text-gray-500 mt-1">Additional international chapters as MREA grows its global footprint.</p>
                   </div>
                 </div>
@@ -212,15 +213,15 @@ export default function Chapters() {
                           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-0.5 rounded text-xs font-bold shadow" style={{ color: theme.navy }}>
+                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-0.5 rounded text-xs font-bold shadow" style={{ color: theme.darkCharcoal }}>
                           {c.flag} {c.country}
                         </div>
-                        <div className="absolute top-3 right-3 px-2 py-0.5 rounded text-xs font-bold shadow" style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                        <div className="absolute top-3 right-3 px-2 py-0.5 rounded text-xs font-bold shadow" style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
                           {c.status}
                         </div>
                       </div>
                       <div className="p-5">
-                        <h3 className="text-lg font-serif font-bold mb-1" style={{ color: theme.navy }}>MREA {c.name}</h3>
+                        <h3 className="text-lg font-serif font-bold mb-1" style={{ color: theme.darkCharcoal }}>MREA {c.name}</h3>
                         <div className="flex items-center gap-3 text-gray-500 text-sm mb-4">
                           <span className="flex items-center gap-1"><Globe size={13}/>{c.region}</span>
                         </div>

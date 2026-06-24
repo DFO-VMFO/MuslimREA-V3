@@ -8,10 +8,11 @@ import Link from 'next/link';
 import { Briefcase, Globe, Shield, ArrowRight, Users } from 'lucide-react';
 
 const theme = {
-  navy: '#0B1A30',
+  darkCharcoal: '#1A1A1A',
   gold: '#D4AF37',
-  charcoal: '#333333',
-  lightGray: '#F5F7FA'
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6'
 };
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0" style={{ backgroundColor: theme.navy, opacity: 0.87 }}></div>
+            <div className="absolute inset-0" style={{ backgroundColor: theme.darkCharcoal, opacity: 0.87 }}></div>
           </div>
 
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -49,7 +50,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/membership"
                 className="px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5 inline-block text-center"
-                style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
                 Apply for Membership
               </Link>
               <Link href="/chapters"
@@ -64,14 +65,14 @@ export default function Home() {
         {/* Mission Banner */}
         <div style={{ backgroundColor: theme.gold }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
-            <p className="font-bold text-sm uppercase tracking-[0.2em]" style={{ color: theme.navy }}>
+            <p className="font-bold text-sm uppercase tracking-[0.2em]" style={{ color: theme.darkCharcoal }}>
               A non-profit professional trade association committed to ethical leadership, advocacy & community wealth-building
             </p>
           </div>
         </div>
 
         {/* Reach Stats */}
-        <div style={{ backgroundColor: theme.navy }} className="border-t border-gray-800 py-14">
+        <div style={{ backgroundColor: theme.darkCharcoal }} className="border-t border-gray-800 py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
@@ -99,7 +100,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Our Values</span>
-              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>The MREA Standard</h2>
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.darkCharcoal }}>The MREA Standard</h2>
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
               <p className="text-gray-500 mt-5 max-w-2xl mx-auto text-sm leading-relaxed">
                 MREA is built on Islamic principles of professional ethics — values that transcend background and apply to every member of our global community.
@@ -127,8 +128,8 @@ export default function Home() {
                 }
               ].map((pillar, i) => (
                 <div key={i} className="border border-gray-100 rounded-sm p-8 bg-slate-50 text-center group hover:shadow-md transition-shadow">
-                  <div className="text-3xl font-serif mb-3 opacity-30" style={{ color: theme.navy }}>{pillar.arabic}</div>
-                  <h3 className="text-xl font-bold mb-1" style={{ color: theme.navy }}>{pillar.title}</h3>
+                  <div className="text-3xl font-serif mb-3 opacity-30" style={{ color: theme.darkCharcoal }}>{pillar.arabic}</div>
+                  <h3 className="text-xl font-bold mb-1" style={{ color: theme.darkCharcoal }}>{pillar.title}</h3>
                   <div className="text-xs uppercase tracking-widest mb-4 font-semibold" style={{ color: theme.gold }}>{pillar.subtitle}</div>
                   <p className="text-gray-600 text-sm leading-relaxed">{pillar.desc}</p>
                 </div>
@@ -143,11 +144,11 @@ export default function Home() {
         </div>
 
         {/* Professional Ecosystem */}
-        <div className="py-24" style={{ backgroundColor: theme.lightGray }}>
+        <div className="py-24" style={{ backgroundColor: theme.lightBg }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Member Services</span>
-              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Professional Ecosystem</h2>
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.darkCharcoal }}>Professional Ecosystem</h2>
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -159,10 +160,10 @@ export default function Home() {
                 { icon: <Users size={28}/>, title: 'Ethical Investment', desc: 'Values-based standards for development and investment, grounded in the MREA Standard.' },
               ].map((item, i) => (
                 <div key={i} className="bg-white p-6 rounded shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: `${theme.darkCharcoal}10`, color: theme.darkCharcoal }}>
                     {item.icon}
                   </div>
-                  <h3 className="font-bold text-sm mb-2 leading-snug" style={{ color: theme.navy }}>{item.title}</h3>
+                  <h3 className="font-bold text-sm mb-2 leading-snug" style={{ color: theme.darkCharcoal }}>{item.title}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -171,7 +172,7 @@ export default function Home() {
         </div>
 
         {/* Women's Alliance CTA */}
-        <div className="py-20" style={{ backgroundColor: theme.navy }}>
+        <div className="py-20" style={{ backgroundColor: theme.darkCharcoal }}>
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Official Division</span>
             <h2 className="text-4xl font-serif font-bold text-white mb-4">Muslim Women Real Estate Alliance</h2>
@@ -180,7 +181,7 @@ export default function Home() {
             </p>
             <p className="text-gray-400 text-sm mb-8">Including the Muslim Women Real Estate Investment Club — focused on education, relationship building, and community wealth creation.</p>
             <Link href="/womens-alliance" className="inline-flex items-center gap-2 px-8 py-3 font-bold rounded-sm transition hover:opacity-90"
-              style={{ backgroundColor: theme.gold, color: theme.navy }}>
+              style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
               <Users className="w-5 h-5" /> Explore the Alliance
             </Link>
           </div>
@@ -189,7 +190,7 @@ export default function Home() {
         {/* Join Mailing List */}
         <div className="py-16 bg-white border-t border-gray-100">
           <div className="max-w-xl mx-auto px-4 text-center">
-            <h3 className="text-2xl font-serif font-bold mb-2" style={{ color: theme.navy }}>Stay Informed</h3>
+            <h3 className="text-2xl font-serif font-bold mb-2" style={{ color: theme.darkCharcoal }}>Stay Informed</h3>
             <p className="text-gray-500 mb-6 text-sm">Get chapter updates, event invitations, and industry research delivered to your inbox.</p>
             <NewsletterForm variant="row" />
           </div>

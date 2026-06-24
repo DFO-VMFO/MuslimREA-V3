@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { ArrowRight, Building2, Users, DollarSign, BarChart3, Network, Landmark } from 'lucide-react';
 
 const theme = {
-  navy: '#0D3918',
-  gold: '#7CB342',
-  charcoal: '#2D2D2D',
-  lightGray: '#F5F7FA',
+  darkCharcoal: '#1A1A1A',
+  gold: '#D4AF37',
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6',
 };
 
 const councils = [
@@ -79,7 +80,7 @@ export default function CouncilsPage() {
       <Navbar />
       <main className="flex-grow">
         {/* Header */}
-        <div className="py-20 text-white" style={{ backgroundColor: theme.navy }}>
+        <div className="py-20 text-white" style={{ backgroundColor: theme.darkCharcoal }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="uppercase tracking-[0.25em] text-xs font-bold block mb-4" style={{ color: theme.gold }}>
               Strategic Networks
@@ -92,12 +93,12 @@ export default function CouncilsPage() {
         </div>
 
         {/* Councils Grid */}
-        <div className="py-20" style={{ backgroundColor: theme.lightGray }}>
+        <div className="py-20" style={{ backgroundColor: theme.lightBg }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             {councils.map((council, i) => (
               <div key={council.slug} className={`bg-white rounded-sm shadow-md border border-gray-100 overflow-hidden grid grid-cols-1 lg:grid-cols-3 ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 {/* Color Accent Panel */}
-                <div className="lg:col-span-1 p-10 flex flex-col justify-between" style={{ backgroundColor: i % 2 === 0 ? theme.navy : theme.charcoal }}>
+                <div className="lg:col-span-1 p-10 flex flex-col justify-between" style={{ backgroundColor: i % 2 === 0 ? theme.darkCharcoal : theme.darkCharcoal }}>
                   <div>
                     <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: `${theme.gold}20`, color: theme.gold }}>
                       {council.icon}
@@ -126,11 +127,11 @@ export default function CouncilsPage() {
                   </div>
                   <div className="mt-8 flex gap-4">
                     <Link href="/membership" className="inline-flex items-center gap-2 px-6 py-2 rounded-sm font-bold text-sm transition hover:opacity-90"
-                          style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                          style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
                       Apply for Access <ArrowRight className="w-4 h-4" />
                     </Link>
                     <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-2 rounded-sm font-bold text-sm border transition hover:bg-gray-50"
-                          style={{ borderColor: theme.navy, color: theme.navy }}>
+                          style={{ borderColor: theme.darkCharcoal, color: theme.darkCharcoal }}>
                       Contact Council
                     </Link>
                   </div>
@@ -143,10 +144,10 @@ export default function CouncilsPage() {
         {/* CTA */}
         <div className="py-16 bg-white border-t border-gray-100 text-center">
           <div className="max-w-2xl mx-auto px-4">
-            <h3 className="text-2xl font-serif font-bold mb-3" style={{ color: theme.navy }}>Ready to engage with a council?</h3>
+            <h3 className="text-2xl font-serif font-bold mb-3" style={{ color: theme.darkCharcoal }}>Ready to engage with a council?</h3>
             <p className="text-gray-500 mb-6">Council access is tied to your MREA membership tier. Upgrade your membership to unlock the right network for your goals.</p>
             <Link href="/membership" className="inline-block px-8 py-3 rounded-sm font-bold transition hover:opacity-90"
-                  style={{ backgroundColor: theme.navy, color: 'white' }}>
+                  style={{ backgroundColor: theme.darkCharcoal, color: 'white' }}>
               View Membership Tiers
             </Link>
           </div>

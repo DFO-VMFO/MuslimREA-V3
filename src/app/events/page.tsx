@@ -7,10 +7,11 @@ import Image from 'next/image';
 import { Calendar, MapPin } from 'lucide-react';
 
 const theme = {
-  navy: '#0D3918',
-  gold: '#7CB342',
-  charcoal: '#2D2D2D',
-  lightGray: '#F5F7FA'
+  darkCharcoal: '#1A1A1A',
+  gold: '#D4AF37',
+  darkGreen: '#0D3918',
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6'
 };
 
 const MOCK_EVENTS = [
@@ -27,7 +28,7 @@ export default function Events() {
       <Navbar />
       <main className="flex-grow">
         <div className="min-h-screen bg-white pb-24">
-          <div style={{ backgroundColor: theme.navy }} className="py-16 text-white text-center">
+          <div style={{ backgroundColor: theme.darkCharcoal }} className="py-16 text-white text-center">
             <div className="max-w-3xl mx-auto px-4">
               <h1 className="text-4xl font-serif font-bold mb-4">Event & Education Portal</h1>
               <p className="text-xl text-gray-300">
@@ -50,7 +51,7 @@ export default function Events() {
                   </button>
                 ))}
               </div>
-              <button className="flex items-center text-sm font-bold" style={{ color: theme.navy }}>
+              <button className="flex items-center text-sm font-bold" style={{ color: theme.darkCharcoal }}>
                 <Calendar className="w-4 h-4 mr-2" /> View Calendar Grid
               </button>
             </div>
@@ -68,7 +69,7 @@ export default function Events() {
                       className="object-cover"
                     />
                     <div className="absolute top-4 left-4 flex space-x-2">
-                      <span className="bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold" style={{ color: theme.navy }}>{event.type}</span>
+                      <span className="bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold" style={{ color: theme.darkCharcoal }}>{event.type}</span>
                       {event.tags.includes('Women-Only') && (
                         <span className="bg-pink-100/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-pink-800">MWREIC</span>
                       )}
@@ -78,11 +79,11 @@ export default function Events() {
                     <div className="text-sm font-bold mb-2 flex items-center" style={{ color: theme.gold }}>
                       <Calendar className="w-4 h-4 mr-1" /> {event.date}
                     </div>
-                    <h3 className="text-xl font-bold mb-2 flex-1" style={{ color: theme.navy }}>{event.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 flex-1" style={{ color: theme.darkCharcoal }}>{event.title}</h3>
                     <div className="flex items-center text-gray-500 text-sm mb-6">
                       <MapPin className="w-4 h-4 mr-1" /> {event.location}
                     </div>
-                    <button className="w-full py-3 rounded-sm font-bold text-white transition hover:opacity-90" style={{ backgroundColor: theme.navy }}>
+                    <button className="w-full py-3 rounded-sm font-bold text-white transition hover:opacity-90" style={{ backgroundColor: theme.darkCharcoal }}>
                       Get Tickets
                     </button>
                   </div>
