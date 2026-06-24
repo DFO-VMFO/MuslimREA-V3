@@ -6,11 +6,10 @@ import Footer from '@/components/Footer';
 import { Check, Users, Briefcase, Globe } from 'lucide-react';
 
 const theme = {
-  darkCharcoal: '#1A1A1A',
-  gold: '#D4AF37',
-  darkGreen: '#0D3918',
-  mediumGreen: '#2D5A2D',
-  lightBg: '#F9F8F6'
+  navy: '#0D3918',
+  gold: '#7CB342',
+  charcoal: '#2D2D2D',
+  lightGray: '#F5F7FA'
 };
 
 const membershipPlans = [
@@ -63,7 +62,7 @@ export default function Membership() {
       <Navbar />
       <main className="flex-grow">
         {/* Hero */}
-        <div style={{ backgroundColor: theme.darkCharcoal }} className="py-16 text-white">
+        <div style={{ backgroundColor: theme.navy }} className="py-16 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl font-serif font-bold mb-4">Join the Global MREA Network</h1>
             <p className="text-xl text-gray-300">
@@ -73,10 +72,10 @@ export default function Membership() {
         </div>
 
         {/* Membership Plans */}
-        <div className="py-16" style={{ backgroundColor: theme.lightBg }}>
+        <div className="py-16" style={{ backgroundColor: theme.lightGray }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.darkCharcoal }}>Membership Options</h2>
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Membership Options</h2>
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
             </div>
 
@@ -90,10 +89,10 @@ export default function Membership() {
                   onClick={() => setSelectedPlan(index)}
                 >
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: `${theme.darkCharcoal}10`, color: theme.darkCharcoal }}>
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style={{ backgroundColor: `${theme.navy}10`, color: theme.navy }}>
                       {plan.icon}
                     </div>
-                    <h3 className="text-xl font-bold mb-2" style={{ color: theme.darkCharcoal }}>{plan.name}</h3>
+                    <h3 className="text-xl font-bold mb-2" style={{ color: theme.navy }}>{plan.name}</h3>
                     <div className="text-2xl font-serif font-bold" style={{ color: theme.gold }}>{plan.price}</div>
                     {'badge' in plan && plan.badge && (
                       <p className="text-xs text-gray-500 mt-2 italic">{plan.badge}</p>
@@ -114,7 +113,7 @@ export default function Membership() {
 
             <div className="text-center mt-12">
               <button className="px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5" 
-                      style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
+                      style={{ backgroundColor: theme.gold, color: theme.navy }}>
                 Apply for {membershipPlans[selectedPlan].name} Membership
               </button>
             </div>
@@ -125,7 +124,7 @@ export default function Membership() {
         <div className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.darkCharcoal }}>Why Join MREA?</h2>
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Why Join MREA?</h2>
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
             </div>
 
@@ -137,7 +136,7 @@ export default function Membership() {
                 { title: 'Community Impact', desc: 'Support initiatives that advance our communities globally.' }
               ].map((benefit, i) => (
                 <div key={i} className="text-center">
-                  <h3 className="text-lg font-bold mb-3" style={{ color: theme.darkCharcoal }}>{benefit.title}</h3>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: theme.navy }}>{benefit.title}</h3>
                   <p className="text-gray-600 text-sm">{benefit.desc}</p>
                 </div>
               ))}

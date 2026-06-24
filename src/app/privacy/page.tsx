@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'MREA Privacy Policy — how we collect, use, and protect your information.',
 };
 
-const theme = { darkCharcoal: '#1A1A1A', gold: '#D4AF37', darkGreen: '#0D3918', lightBg: '#F9F8F6' };
+const theme = { navy: '#0D3918', gold: '#7CB342', lightGray: '#F5F7FA' };
 
 const SECTIONS = [
   {
@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
     <div className="font-sans flex flex-col min-h-screen text-slate-900">
       <Navbar />
       <main className="flex-grow">
-        <div style={{ backgroundColor: theme.darkCharcoal }} className="py-16 text-white">
+        <div style={{ backgroundColor: theme.navy }} className="py-16 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Legal</span>
             <h1 className="text-4xl font-serif font-bold mb-2">Privacy Policy</h1>
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
               <div className="space-y-10">
                 {SECTIONS.map((s, i) => (
                   <div key={i}>
-                    <h2 className="text-lg font-bold mb-3" style={{ color: theme.darkCharcoal }}>{i + 1}. {s.title}</h2>
+                    <h2 className="text-lg font-bold mb-3" style={{ color: theme.navy }}>{i + 1}. {s.title}</h2>
                     {s.body.split('\n\n').map((para, j) => (
                       para.startsWith('-') ? (
                         <ul key={j} className="list-disc list-inside text-gray-600 text-sm space-y-1 mb-3">

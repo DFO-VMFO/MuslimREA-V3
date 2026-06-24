@@ -6,10 +6,9 @@ import Image from 'next/image';
 import { Menu, X, ChevronDown, Lock } from 'lucide-react';
 
 const theme = {
-  darkCharcoal: '#1A1A1A',
-  gold: '#D4AF37',
-  darkGreen: '#0D3918',
-  lightBg: '#F9F8F6',
+  navy: '#0D3918',
+  gold: '#7CB342',
+  charcoal: '#2D2D2D',
 };
 
 function DropdownMenu({ label, items }: { label: string; items: { href: string; title: string; desc?: string }[] }) {
@@ -35,7 +34,7 @@ function DropdownMenu({ label, items }: { label: string; items: { href: string; 
       </button>
       {open && (
         <div className="absolute top-full left-0 mt-2 w-64 rounded-sm shadow-2xl border border-gray-700 z-50 py-2"
-             style={{ backgroundColor: theme.darkCharcoal }}>
+             style={{ backgroundColor: theme.navy }}>
           {items.map(item => (
             <Link
               key={item.href}
@@ -71,13 +70,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: theme.darkCharcoal }}>
+    <nav className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: theme.navy }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center px-3 py-2 rounded" style={{ backgroundColor: theme.lightBg }}>
-              <Image src="/logo.png" alt="MREA logo" width={140} height={44} className="object-contain" priority />
+            <Link href="/" className="flex items-center">
+              <Image src="/logo.png" alt="MREA logo" width={140} height={44} className="mr-3 object-contain" priority />
             </Link>
           </div>
 
@@ -91,9 +90,9 @@ export default function Navbar() {
             <DropdownMenu label="Resources" items={resourceItems} />
             <DropdownMenu label="About Us" items={aboutItems} />
             <Link href="/contact" className="text-gray-300 hover:text-white transition font-medium">Contact</Link>
-            <div className="h-6 w-px" style={{ backgroundColor: theme.gold }}></div>
+            <div className="h-6 w-px bg-gray-600"></div>
             <Link href="/member-portal" className="flex items-center gap-1 px-5 py-2 rounded-sm font-bold transition-all shadow-lg hover:shadow-xl"
-                    style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
+                    style={{ backgroundColor: theme.gold, color: theme.navy }}>
               <Lock className="w-4 h-4" /> Member Portal
             </Link>
           </div>
@@ -109,7 +108,7 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className="lg:hidden" style={{ backgroundColor: theme.darkCharcoal }}>
+        <div className="lg:hidden" style={{ backgroundColor: theme.charcoal }}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link href="/chapters" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Chapters</Link>
             <Link href="/councils" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Councils</Link>
@@ -136,7 +135,7 @@ export default function Navbar() {
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Contact</Link>
             <div className="px-3 py-2">
               <Link href="/member-portal" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-2 rounded-sm font-bold"
-                      style={{ backgroundColor: theme.gold, color: theme.darkCharcoal }}>
+                      style={{ backgroundColor: theme.gold, color: theme.navy }}>
                 <Lock className="w-4 h-4" /> Member Portal
               </Link>
             </div>
