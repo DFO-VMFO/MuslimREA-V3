@@ -40,9 +40,9 @@ export default async function ChapterDetail({ params }: PageProps) {
       <div className="font-sans flex flex-col min-h-screen text-slate-900">
         <Navbar />
         <main className="flex-grow flex flex-col items-center justify-center py-24 px-4" style={{ backgroundColor: '#F5F7FA' }}>
-          <h1 className="text-3xl font-serif font-bold mb-3" style={{ color: '#0B1A30' }}>Chapter Not Found</h1>
+          <h1 className="text-3xl font-serif font-bold mb-3" style={{ color: '#0D3918' }}>Chapter Not Found</h1>
           <p className="text-gray-500 mb-6">This chapter doesn&apos;t exist or hasn&apos;t launched yet.</p>
-          <Link href="/chapters" className="px-6 py-3 rounded-sm font-bold text-sm text-white" style={{ backgroundColor: '#0B1A30' }}>View All Chapters</Link>
+          <Link href="/chapters" className="px-6 py-3 rounded-sm font-bold text-sm text-white" style={{ backgroundColor: '#0D3918' }}>View All Chapters</Link>
         </main>
         <Footer />
       </div>
@@ -96,7 +96,7 @@ export default async function ChapterDetail({ params }: PageProps) {
           <div className="border-b border-gray-200 sticky top-20 bg-white z-40">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex space-x-8">
               {['Overview', 'Local Board', 'Events', 'Sponsors'].map((tab, i) => (
-                <button key={i} className={`py-4 font-bold text-sm uppercase tracking-wide border-b-2 ${i === 0 ? 'border-blue-900 text-blue-900' : 'border-transparent text-gray-500 hover:text-gray-900'}`}
+                <button key={i} className={`py-4 font-bold text-sm uppercase tracking-wide border-b-2 ${i === 0 ? 'border-[#0D3918] text-[#0D3918]' : 'border-transparent text-gray-500 hover:text-gray-900'}`}
                         style={i===0 ? { borderColor: theme.navy, color: theme.navy } : {}}>
                   {tab}
                 </button>

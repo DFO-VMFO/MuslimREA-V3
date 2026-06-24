@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Search, MapPin, Briefcase, Linkedin, Mail } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const CHAPTERS = ['All Chapters', 'Houston, TX', 'Dallas, TX', 'New York, NY', 'Chicago, IL', 'Los Angeles, CA', 'Washington, D.C.'];
 const SPECIALTIES = ['All Specialties', 'Residential Brokerage', 'Commercial Brokerage', 'Multifamily Investment', 'Ground-Up Development', 'Mortgage & Lending', 'Property Management', 'Real Estate Law'];

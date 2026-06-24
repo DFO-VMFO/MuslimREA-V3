@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Shield, Lock, ArrowRight, FileText, Users, Calendar } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 interface Council {
   name: string;

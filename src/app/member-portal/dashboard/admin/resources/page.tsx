@@ -7,7 +7,7 @@ import {
   CheckCircle, FileDown, Eye
 } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const EXISTING_RESOURCES = [
   { id: 1, title: 'Shariah-Compliant Financing Guide 2026', category: 'Standards', format: 'PDF', size: '2.4 MB', access: 'All Members', status: 'Published' },

@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { ArrowRight, X } from 'lucide-react';
 
 const theme = {
-  navy: '#0B1A30',
+  navy: '#0D3918',
   gold: '#D4AF37',
   charcoal: '#333333',
   lightGray: '#F5F7FA',

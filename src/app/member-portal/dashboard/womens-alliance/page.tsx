@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Heart, TrendingUp, Shield, Calendar, ArrowRight, FileText, Users, Star } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const INVESTMENT_CLUB_RESOURCES = [
   { title: 'Investment Club Orientation & Membership Guide', type: 'PDF Guide', date: 'Jan 2026' },
@@ -239,9 +239,10 @@ export default function WomensAlliancePage() {
                 <span
                   className={`text-[10px] font-bold px-2 py-0.5 rounded flex-shrink-0 ${
                     event.type === 'Virtual'
-                      ? 'bg-blue-50 text-blue-700'
+                      ? 'text-white'
                       : 'bg-gray-100 text-gray-600'
                   }`}
+                  style={event.type === 'Virtual' ? { backgroundColor: '#0D3918' } : {}}
                 >
                   {event.type}
                 </span>

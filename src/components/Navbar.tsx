@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, Lock } from 'lucide-react';
 
 const theme = {
@@ -51,6 +52,7 @@ function DropdownMenu({ label, items }: { label: string; items: { href: string; 
 }
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
@@ -67,6 +69,10 @@ export default function Navbar() {
     { href: '/resources#education', title: 'Educational Materials' },
   ];
 
+  const isActive = (path: string) => pathname === path;
+
+  const navLinkStyle = (path: string) => isActive(path) ? { color: theme.gold, fontWeight: 'bold' } : { color: '#1f2937' };
+
   return (
     <nav className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,14 +86,14 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Link href="/chapters" className="text-gray-800 hover:text-gray-600 transition font-medium">Chapters</Link>
-            <Link href="/councils" className="text-gray-800 hover:text-gray-600 transition font-medium">Councils</Link>
-            <Link href="/womens-alliance" className="text-gray-800 hover:text-gray-600 transition font-medium" style={{ color: theme.gold }}>Women&apos;s Alliance</Link>
-            <Link href="/events" className="text-gray-800 hover:text-gray-600 transition font-medium">Events</Link>
-            <Link href="/membership" className="text-gray-800 hover:text-gray-600 transition font-medium">Membership</Link>
+            <Link href="/chapters" className="text-gray-800 hover:text-gray-600 transition font-medium" style={navLinkStyle('/chapters')}>Chapters</Link>
+            <Link href="/councils" className="text-gray-800 hover:text-gray-600 transition font-medium" style={navLinkStyle('/councils')}>Councils</Link>
+            <Link href="/womens-alliance" className="text-gray-800 hover:text-gray-600 transition font-medium" style={isActive('/womens-alliance') ? { color: theme.gold, fontWeight: 'bold' } : { color: theme.gold }}>Women&apos;s Alliance</Link>
+            <Link href="/events" className="text-gray-800 hover:text-gray-600 transition font-medium" style={navLinkStyle('/events')}>Events</Link>
+            <Link href="/membership" className="text-gray-800 hover:text-gray-600 transition font-medium" style={navLinkStyle('/membership')}>Membership</Link>
             <DropdownMenu label="Resources" items={resourceItems} />
             <DropdownMenu label="About Us" items={aboutItems} />
-            <Link href="/contact" className="text-gray-800 hover:text-gray-600 transition font-medium">Contact</Link>
+            <Link href="/contact" className="text-gray-800 hover:text-gray-600 transition font-medium" style={navLinkStyle('/contact')}>Contact</Link>
             <div className="h-6 w-px bg-gray-400"></div>
             <Link href="/member-portal" className="flex items-center gap-1 px-5 py-2 rounded-sm font-bold transition-all shadow-lg hover:shadow-xl"
                     style={{ backgroundColor: theme.gold, color: theme.navy }}>

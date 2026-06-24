@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 const theme = {
-  navy: '#0B1A30',
+  navy: '#0D3918',
   gold: '#D4AF37',
   charcoal: '#333333',
   lightGray: '#F5F7FA'

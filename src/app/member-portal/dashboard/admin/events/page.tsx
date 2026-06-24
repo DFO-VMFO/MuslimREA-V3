@@ -6,7 +6,7 @@ import {
   Search, Edit3, Trash2, CheckCircle, ChevronDown
 } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const EXISTING_EVENTS = [
   { id: 1, title: 'Houston Chapter Networking Mixer', date: 'June 12, 2026', type: 'Chapter', chapter: 'Houston, TX', rsvps: 87, status: 'Published' },

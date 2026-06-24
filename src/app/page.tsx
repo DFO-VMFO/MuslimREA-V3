@@ -8,10 +8,11 @@ import Link from 'next/link';
 import { Briefcase, Globe, Shield, ArrowRight, Users } from 'lucide-react';
 
 const theme = {
-  navy: '#0B1A30',
+  navy: '#0D3918',
   gold: '#D4AF37',
   charcoal: '#333333',
-  lightGray: '#F5F7FA'
+  mediumGreen: '#2D5A2D',
+  lightBg: '#F9F8F6'
 };
 
 export default function Home() {
@@ -143,7 +144,7 @@ export default function Home() {
         </div>
 
         {/* Professional Ecosystem */}
-        <div className="py-24" style={{ backgroundColor: theme.lightGray }}>
+        <div className="py-24" style={{ backgroundColor: theme.lightBg }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <span className="uppercase tracking-[0.2em] text-xs font-bold block mb-3" style={{ color: theme.gold }}>Member Services</span>

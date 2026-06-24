@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import { getSupabaseClient } from '@/lib/supabase';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const NAV = [
   { href: '/member-portal/dashboard', label: 'Dashboard', icon: LayoutDashboard, exact: true },

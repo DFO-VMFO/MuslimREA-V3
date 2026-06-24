@@ -6,7 +6,7 @@ import {
   MapPin, Award, CheckCircle, RefreshCcw, Mail
 } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const APPLICATIONS = [
   { id: 101, name: 'Sarah Khan', company: 'Bridge Real Estate', chapter: 'Chicago, IL', tier: 'Individual Professional', email: 'sarah@bridgere.com', applied: '2 hours ago', status: 'Pending Review', bio: 'Residential broker with 8 years experience specializing in Shariah-compliant financing for first-time buyers.' },
@@ -141,7 +141,7 @@ export default function MemberManagement() {
                   <div className="flex items-center gap-3 text-xs text-gray-600">
                     <Award className="w-4 h-4 text-gray-400" />
                     <span>Stripe Link: </span>
-                    <span className="text-blue-600 hover:underline cursor-pointer flex items-center gap-1">
+                    <span className="text-[#0D3918] hover:underline cursor-pointer flex items-center gap-1" style={{ color: '#0D3918' }}>
                       cus_12345 <ExternalLink className="w-3 h-3" />
                     </span>
                   </div>

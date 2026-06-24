@@ -6,12 +6,12 @@ import {
   ArrowRight, UserCheck, AlertCircle, BarChart3, Settings
 } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const ADMIN_STATS = [
   { label: 'Pending Approvals', value: '12', icon: UserCheck, color: '#f59e0b' },
   { label: 'New Members (30d)', value: '28', icon: Users, color: '#10b981' },
-  { label: 'Upcoming Events', value: '4', icon: Calendar, color: '#3b82f6' },
+  { label: 'Upcoming Events', value: '4', icon: Calendar, color: '#D4AF37' },
   { label: 'Support Tickets', value: '3', icon: AlertCircle, color: '#ef4444' },
 ];
 

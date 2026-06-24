@@ -114,7 +114,7 @@ export default function Chapters() {
               </p>
               <div className="flex flex-wrap justify-center gap-3 mb-8 text-sm">
                 {NATIONAL_CHAPTERS.map(nc => (
-                  <a key={nc.nationalId} href={`#${nc.nationalId}`} className="flex items-center gap-1 px-4 py-2 rounded-sm bg-white/10 hover:bg-white/20 transition-colors">
+                  <a key={nc.nationalId} href={`#${nc.nationalId}`} className="flex items-center gap-1 px-4 py-2 rounded-sm text-white hover:opacity-90 transition-colors font-semibold" style={{ backgroundColor: '#2D5A2D' }}>
                     <span>{nc.flag}</span><span>{nc.country}</span>
                   </a>
                 ))}

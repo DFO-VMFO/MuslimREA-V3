@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Award, CheckCircle, Linkedin } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 const SPECIALTY_OPTIONS = [
   'Residential Brokerage',

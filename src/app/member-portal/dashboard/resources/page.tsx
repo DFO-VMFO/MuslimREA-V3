@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { FileText, Download, Search, BookOpen, Scale, Briefcase, BarChart2, ClipboardList } from 'lucide-react';
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37' };
+const theme = { navy: '#0D3918', gold: '#D4AF37' };
 
 interface Resource {
   id: number;

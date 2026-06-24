@@ -76,7 +76,7 @@ export default function WomensAlliancePage() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0" style={{ backgroundColor: theme.navy, opacity: 0.88 }}></div>
+            <div className="absolute inset-0" style={{ backgroundColor: '#1A1A1A', opacity: 0.75 }}></div>
           </div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <span className="uppercase tracking-[0.25em] text-xs font-bold block mb-4" style={{ color: theme.gold }}>

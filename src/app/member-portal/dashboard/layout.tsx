@@ -57,7 +57,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     return (
       <div
         className="min-h-screen flex items-center justify-center"
-        style={{ backgroundColor: '#0B1A30' }}
+        style={{ backgroundColor: '#0D3918' }}
       >
         <div className="w-8 h-8 border-2 border-white/20 border-t-yellow-400 rounded-full animate-spin" />
       </div>
@@ -102,7 +102,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </button>
           <span
             className="font-serif font-bold text-sm"
-            style={{ color: '#0B1A30' }}
+            style={{ color: '#0D3918' }}
           >
             MREA Member Portal
           </span>
