@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'MREA Privacy Policy — how we collect, use, and protect your information.',
 };
 
-const theme = { navy: '#0B1A30', gold: '#D4AF37', lightGray: '#F5F7FA' };
+const theme = { navy: '#0D3918', gold: '#7CB342', lightGray: '#F5F7FA' };
 
 const SECTIONS = [
   {

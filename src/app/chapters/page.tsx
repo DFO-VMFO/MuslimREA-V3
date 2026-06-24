@@ -8,9 +8,9 @@ import Link from 'next/link';
 import { Users, ArrowRight, Search, Globe } from 'lucide-react';
 
 const theme = {
-  navy: '#0B1A30',
-  gold: '#D4AF37',
-  charcoal: '#333333',
+  navy: '#0D3918',
+  gold: '#7CB342',
+  charcoal: '#2D2D2D',
   lightGray: '#F5F7FA'
 };
 
