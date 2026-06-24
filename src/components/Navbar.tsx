@@ -25,17 +25,15 @@ function DropdownMenu({ label, items }: { label: string; items: { href: string; 
 
   return (
     <div className="relative" ref={ref}>
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 text-gray-300 hover:text-white transition font-medium"
+      <button onClick={() => setOpen(!open)} className="flex items-center gap-1 text-gray-700 hover:text-gray-900 transition font-medium"
         suppressHydrationWarning
       >
         {label} <ChevronDown className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} />
-      </button>
-      {open && (
-        <div className="absolute top-full left-0 mt-2 w-64 rounded-sm shadow-2xl border border-gray-700 z-50 py-2"
-             style={{ backgroundColor: theme.navy }}>
-          {items.map(item => (
+        </button>
+        {open && (
+          <div className="absolute top-full left-0 mt-2 w-64 rounded-sm shadow-2xl border border-gray-300 z-50 py-2"
+               style={{ backgroundColor: theme.navy }}>
+            {items.map(item => (
             <Link
               key={item.href}
               href={item.href}
@@ -70,7 +68,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: theme.navy }}>
+    <nav className="sticky top-0 z-50 shadow-md" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           {/* Logo */}
@@ -82,15 +80,15 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Link href="/chapters" className="text-gray-300 hover:text-white transition font-medium">Chapters</Link>
-            <Link href="/councils" className="text-gray-300 hover:text-white transition font-medium">Councils</Link>
-            <Link href="/womens-alliance" className="text-gray-300 hover:text-white transition font-medium" style={{ color: theme.gold }}>Women&apos;s Alliance</Link>
-            <Link href="/events" className="text-gray-300 hover:text-white transition font-medium">Events</Link>
-            <Link href="/membership" className="text-gray-300 hover:text-white transition font-medium">Membership</Link>
+            <Link href="/chapters" className="text-gray-800 hover:text-gray-600 transition font-medium">Chapters</Link>
+            <Link href="/councils" className="text-gray-800 hover:text-gray-600 transition font-medium">Councils</Link>
+            <Link href="/womens-alliance" className="text-gray-800 hover:text-gray-600 transition font-medium" style={{ color: theme.gold }}>Women&apos;s Alliance</Link>
+            <Link href="/events" className="text-gray-800 hover:text-gray-600 transition font-medium">Events</Link>
+            <Link href="/membership" className="text-gray-800 hover:text-gray-600 transition font-medium">Membership</Link>
             <DropdownMenu label="Resources" items={resourceItems} />
             <DropdownMenu label="About Us" items={aboutItems} />
-            <Link href="/contact" className="text-gray-300 hover:text-white transition font-medium">Contact</Link>
-            <div className="h-6 w-px bg-gray-600"></div>
+            <Link href="/contact" className="text-gray-800 hover:text-gray-600 transition font-medium">Contact</Link>
+            <div className="h-6 w-px bg-gray-400"></div>
             <Link href="/member-portal" className="flex items-center gap-1 px-5 py-2 rounded-sm font-bold transition-all shadow-lg hover:shadow-xl"
                     style={{ backgroundColor: theme.gold, color: theme.navy }}>
               <Lock className="w-4 h-4" /> Member Portal
@@ -99,7 +97,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center">
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-300">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800">
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
@@ -108,31 +106,31 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className="lg:hidden" style={{ backgroundColor: theme.charcoal }}>
+        <div className="lg:hidden" style={{ backgroundColor: '#F5F5F5' }}>
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link href="/chapters" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Chapters</Link>
-            <Link href="/councils" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Councils</Link>
+            <Link href="/chapters" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-gray-800">Chapters</Link>
+            <Link href="/councils" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-gray-800">Councils</Link>
             <Link href="/womens-alliance" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 font-semibold" style={{ color: theme.gold }}>Women&apos;s Alliance</Link>
-            <Link href="/events" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Events</Link>
-            <Link href="/membership" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Membership</Link>
+            <Link href="/events" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-gray-800">Events</Link>
+            <Link href="/membership" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-gray-800">Membership</Link>
 
             {/* Resources accordion */}
-            <button onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)} className="flex items-center justify-between w-full px-3 py-2 text-white">
+            <button onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)} className="flex items-center justify-between w-full px-3 py-2 text-gray-800">
               Resources <ChevronDown className={`w-4 h-4 transition-transform ${mobileResourcesOpen ? 'rotate-180' : ''}`} />
             </button>
             {mobileResourcesOpen && resourceItems.map(item => (
-              <Link key={item.href} href={item.href} onClick={() => setMobileMenuOpen(false)} className="block pl-6 pr-3 py-2 text-gray-300 text-sm">{item.title}</Link>
+              <Link key={item.href} href={item.href} onClick={() => setMobileMenuOpen(false)} className="block pl-6 pr-3 py-2 text-gray-600 text-sm">{item.title}</Link>
             ))}
 
             {/* About accordion */}
-            <button onClick={() => setMobileAboutOpen(!mobileAboutOpen)} className="flex items-center justify-between w-full px-3 py-2 text-white">
+            <button onClick={() => setMobileAboutOpen(!mobileAboutOpen)} className="flex items-center justify-between w-full px-3 py-2 text-gray-800">
               About Us <ChevronDown className={`w-4 h-4 transition-transform ${mobileAboutOpen ? 'rotate-180' : ''}`} />
             </button>
             {mobileAboutOpen && aboutItems.map(item => (
-              <Link key={item.href} href={item.href} onClick={() => setMobileMenuOpen(false)} className="block pl-6 pr-3 py-2 text-gray-300 text-sm">{item.title}</Link>
+              <Link key={item.href} href={item.href} onClick={() => setMobileMenuOpen(false)} className="block pl-6 pr-3 py-2 text-gray-600 text-sm">{item.title}</Link>
             ))}
 
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-white">Contact</Link>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-gray-800">Contact</Link>
             <div className="px-3 py-2">
               <Link href="/member-portal" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-2 rounded-sm font-bold"
                       style={{ backgroundColor: theme.gold, color: theme.navy }}>
