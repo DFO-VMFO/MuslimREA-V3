@@ -27,7 +27,7 @@ type AnyCouncil = Council | LockedCouncil;
 
 const COUNCILS: AnyCouncil[] = [
   {
-    name: 'Muslim Women Real Estate Association',
+    name: 'Muslim Women Real Estate Alliance',
     abbr: 'MWREA',
     description:
       "The official women's division of MREA. Access to mentorship programming, women's leadership forums, and both the Investment Club and the Advocacy Council.",
@@ -134,8 +134,8 @@ export default function CouncilsPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-1">
                       <h3 className="font-bold" style={{ color: theme.navy }}>
-                        {council.name}
-                      </h3>
+                          <Link href="/womens-alliance" className="hover:underline">{council.name}</Link>
+                        </h3>
                       <span
                         className="text-xs font-bold px-2 py-0.5 rounded"
                         style={{ backgroundColor: `${theme.gold}15`, color: theme.gold }}

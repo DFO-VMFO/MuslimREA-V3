@@ -12,8 +12,8 @@ const theme = {
 
 const councils = [
   {
-    slug: 'mwren',
-    name: 'Muslim Women Real Estate Association',
+    slug: 'womens-alliance',
+    name: 'Muslim Women Real Estate Alliance',
     icon: <Network size={36} />,
     tagline: 'The official women\'s professional association of MREA.',
     description:
@@ -102,7 +102,9 @@ export default function CouncilsPage() {
                     <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: `${theme.gold}20`, color: theme.gold }}>
                       {council.icon}
                     </div>
-                    <h2 className="text-2xl font-serif font-bold text-white mb-3">{council.name}</h2>
+                    <h2 className="text-2xl font-serif font-bold text-white mb-3">
+                      <Link href={`/${council.slug}`} className="hover:underline">{council.name}</Link>
+                    </h2>
                     <p className="text-sm italic" style={{ color: theme.gold }}>{council.tagline}</p>
                   </div>
                   <div className="mt-8">
