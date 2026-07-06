@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-serif font-bold mb-6" style={{ color: theme.navy }}>Our History & Mission</h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                The Muslim Real Estate Association (MREA) was incorporated on <strong>March 2, 2026</strong> as a <strong>Texas Nonprofit Corporation</strong> — a formal declaration of the conviction that Muslim professionals deserve a national, faith-aligned institutional home in the real estate industry, one that mirrors the professionalism and advocacy power of organizations like NAHREP, AREAA, and NAR.
+                The Muslim Real Estate Association (MREA) was incorporated on March 2, 2026, as a Texas nonprofit corporation—a formal declaration of the conviction that Muslim real estate professionals deserve a , faith-aligned institutional home within the real estate industry. MREA is being built to reflect the professionalism, excellence, and advocacy of its members while fostering meaningful collaboration with other respected industry organizations and strategic partnerships with like-minded associations that share our commitment to ethical leadership, professional development, and community impact.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
                 MREA is organized under <strong>Section 501(c)(6)</strong> of the Internal Revenue Code as a professional trade association. Our purpose is exclusively focused on the common business interests of our members and the broader Muslim real estate community — not personal profit or individual investment gain.
