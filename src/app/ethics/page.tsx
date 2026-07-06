@@ -80,7 +80,7 @@ export default function Ethics() {
         <div style={{ backgroundColor: theme.gold }} className="py-6">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="font-bold text-sm uppercase tracking-[0.2em]" style={{ color: theme.navy }}>
-              Grounded in Adl (Fairness), Amanah (Integrity), and Khilafah (Stewardship)
+              Grounded in Iman (Faith), Amanah (Trust), and Ummah (Community)
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function Ethics() {
                 MREA — the Muslim Real Estate Association — is a 501(c)(6) nonprofit professional trade association incorporated in the State of Texas. As a membership organization serving real estate professionals globally, MREA requires that all members, officers, directors, chapter leaders, and affiliates adhere to the following standards of professional conduct.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                These standards are not merely procedural — they reflect MREA&apos;s foundational commitment to Islamic principles of justice, trustworthiness, and responsible stewardship of community resources. They apply to all members regardless of their faith background.
+                These standards are not merely procedural — they reflect MREA's foundational commitment to faith, trust, and community stewardship. They apply to all members regardless of their faith background.
               </p>
             </div>
           </div>

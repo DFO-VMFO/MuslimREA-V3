@@ -109,22 +109,22 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {[
                 {
-                  arabic: 'عدل & أمانة',
-                  title: 'Fairness & Integrity',
-                  subtitle: 'Adl & Amanah',
-                  desc: 'Every transaction, negotiation, and professional relationship must be grounded in justice and trustworthiness. We hold our members to the highest standards of honest dealing.'
+                  arabic: 'الإيمان',
+                  title: 'Faith',
+                  subtitle: 'Iman',
+                  desc: 'Our work is grounded in faith — a commitment to purpose, ethical intent, and service beyond profit. This informs how members approach their profession and communities.'
                 },
                 {
-                  arabic: 'خلافة',
-                  title: 'Stewardship',
-                  subtitle: 'Khilafah',
-                  desc: 'Real estate is not merely commerce — it is the stewardship of community assets. MREA members are responsible builders of neighborhoods, wealth, and legacy.'
+                  arabic: 'أمانة',
+                  title: 'Trust',
+                  subtitle: 'Amanah',
+                  desc: 'Trust is the foundation of every professional relationship. MREA members must act with honesty, transparency, and fiduciary care in all dealings.'
                 },
                 {
-                  arabic: 'ازدهار مشترك',
-                  title: 'Shared Prosperity',
-                  subtitle: 'Collaborative Growth',
-                  desc: 'Wealth built ethically lifts entire communities. We reject zero-sum competition and build networks where success is shared and opportunity is widened.'
+                  arabic: 'مجتمع',
+                  title: 'Community',
+                  subtitle: 'Ummah / Community',
+                  desc: 'We prioritize community stewardship and shared prosperity — building networks and opportunities that uplift neighborhoods and collective wellbeing.'
                 }
               ].map((pillar, i) => (
                 <div key={i} className="border border-gray-100 rounded-sm p-8 bg-slate-50 text-center group hover:shadow-md transition-shadow">
