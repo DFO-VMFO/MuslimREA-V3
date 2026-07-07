@@ -149,11 +149,20 @@ export default async function ChapterDetail({ params }: PageProps) {
               <div className="bg-slate-50 p-6 rounded-sm border border-slate-100">
                 <h3 className="font-bold uppercase tracking-wider text-sm mb-4" style={{ color: theme.navy }}>Chapter Leadership</h3>
                 <div className="space-y-4">
-                  {[
-                    { role: 'President', name: 'Omar Al-Fayed' },
-                    { role: 'VP of Commercial', name: 'Sarah Rahman' },
-                    { role: 'MWIRE Chair', name: 'Fatima Zahra' }
-                  ].map((member, i) => (
+                  {(
+                    chapter.id === 'dallas'
+                      ? [
+                          { role: 'President', name: 'ZuliKha Hussain' },
+                          { role: 'Vice President', name: 'Mohammad Wasif Hussain' },
+                          { role: 'Secretary', name: 'Zehra Hussain' },
+                          { role: 'Treasurer', name: 'Mohammad Waseem Hussain' },
+                        ]
+                      : [
+                          { role: 'President', name: 'Omar Al-Fayed' },
+                          { role: 'VP of Commercial', name: 'Sarah Rahman' },
+                          { role: 'MWIRE Chair', name: 'Fatima Zahra' }
+                        ]
+                  ).map((member, i) => (
                     <div key={i} className="flex items-center">
                       <div className="w-10 h-10 rounded-full bg-gray-300 mr-3 flex items-center justify-center text-gray-500 font-bold">
                         {member.name.charAt(0)}
