@@ -15,7 +15,7 @@ const theme = {
 const membershipPlans = [
   {
     name: 'Student Membership',
-    price: 'Complimentary',
+    price: '$250/year',
     features: [
       'Access to member directory',
       'Chapter event participation',
@@ -27,21 +27,34 @@ const membershipPlans = [
     badge: 'For students enrolled in real estate or related programs'
   },
   {
-    name: 'Individual Professional',
-    price: '$299/year',
+    name: 'Associate Membership',
+    price: '$500/year',
     features: [
       'All Student benefits',
-      'Councils access (qualifying tiers)',
       'Chapter event participation',
       'Professional development resources',
-      'Muslim Women Real Estate Association access'
+      'Access to select councils',
+      'Muslim Women Real Estate Alliance access'
     ],
     icon: <Globe size={32} />,
-    badge: 'For licensed agents, brokers, and industry professionals'
+    badge: 'For emerging professionals building their network'
   },
   {
-    name: 'Corporate Partnership',
-    price: '$1,499/year',
+    name: 'Professional Membership',
+    price: '$1,500/year',
+    features: [
+      'All Associate benefits',
+      'Councils access (qualifying tiers)',
+      'Leadership development opportunities',
+      'Priority chapter event access',
+      'Professional advocacy resources'
+    ],
+    icon: <Briefcase size={32} />,
+    badge: 'For licensed agents, brokers, and established professionals'
+  },
+  {
+    name: 'Corporate Membership',
+    price: '$3,000/year',
     features: [
       'All Professional benefits',
       'Priority council access',
@@ -79,7 +92,7 @@ export default function Membership() {
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
               {membershipPlans.map((plan, index) => (
                 <div 
                   key={index}
