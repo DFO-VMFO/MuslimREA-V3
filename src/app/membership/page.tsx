@@ -184,17 +184,6 @@ export default function Membership() {
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <a
-                href={applicationFormUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5"
-                style={{ backgroundColor: theme.gold, color: theme.navy }}
-              >
-                Apply for {membershipPlans[selectedPlan].name} Membership
-              </a>
-            </div>
           </div>
         </div>
 
