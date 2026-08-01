@@ -116,16 +116,16 @@ export default function WhoWeServePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
               {segments.map((segment, i) => (
                 <div key={segment.title} className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 transition hover:shadow-md">
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="flex justify-center mb-4">
                     <div 
-                      className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
+                      className="w-14 h-14 rounded-full flex items-center justify-center"
                       style={{ backgroundColor: `${segment.color}20`, color: segment.color }}
                     >
                       {segment.icon}
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold mb-2" style={{ color: theme.navy }}>{segment.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{segment.description}</p>
+                  <h3 className="text-lg font-bold mb-2 text-center" style={{ color: theme.navy }}>{segment.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed text-center">{segment.description}</p>
                 </div>
               ))}
             </div>
@@ -137,38 +137,36 @@ export default function WhoWeServePage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-serif font-bold mb-6" style={{ color: theme.navy }}>Why MREA Matters</h2>
-              <div className="space-y-6 text-left">
-                  {[
-                    {
-                      title: 'Professional Community',
-                      desc: 'Access a global network of 15,000+ professionals who share your values and face similar challenges.'
-                    },
-                    {
-                      title: 'Institutional Advocacy',
-                      desc: 'Benefit from MREA\'s policy work, industry representation, and voice in national real estate conversations.'
-                    },
-                    {
-                      title: 'Deal Flow & Capital Access',
-                      desc: 'Through our councils and networks, connect with vetted investment opportunities and financial partners.'
-                    },
-                    {
-                      title: 'Professional Development',
-                      desc: 'Develop your skills, advance your career, and access research and resources exclusive to MREA members.'
-                    }
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-4">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-1" style={{ backgroundColor: theme.gold, color: theme.navy }}>
-                        <span className="text-sm font-bold">✓</span>
-                      </div>
-                      <div>
-                        <h4 className="font-bold mb-1" style={{ color: theme.navy }}>{item.title}</h4>
-                        <p className="text-gray-600 text-sm">{item.desc}</p>
-                      </div>
+              <div className="space-y-6 text-left mt-8">
+                {[
+                  {
+                    title: 'Professional Community',
+                    desc: 'Access a global network of 15,000+ professionals who share your values and face similar challenges.'
+                  },
+                  {
+                    title: 'Institutional Advocacy',
+                    desc: 'Benefit from MREA\'s policy work, industry representation, and voice in national real estate conversations.'
+                  },
+                  {
+                    title: 'Deal Flow & Capital Access',
+                    desc: 'Through our councils and networks, connect with vetted investment opportunities and financial partners.'
+                  },
+                  {
+                    title: 'Professional Development',
+                    desc: 'Develop your skills, advance your career, and access research and resources exclusive to MREA members.'
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-1" style={{ backgroundColor: theme.gold, color: theme.navy }}>
+                      <span className="text-sm font-bold">✓</span>
                     </div>
-                  ))}
-                </div>
+                    <div>
+                      <h4 className="font-bold mb-1" style={{ color: theme.navy }}>{item.title}</h4>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-
             </div>
           </div>
         </div>

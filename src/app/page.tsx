@@ -103,7 +103,7 @@ export default function Home() {
               <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>The MREA Standard</h2>
               <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
               <p className="text-gray-500 mt-5 max-w-2xl mx-auto text-sm leading-relaxed">
-                MREA is built on Islamic principles of professional ethics — values that transcend background and apply to every member of our global community.
+                MREA is guided by timeless principles of integrity, trust, service, and shared responsibility. These universal values establish the standard, expected of every member and shape how we conduct business, serve clients, build relationships, and strengthen the communities in which we work.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
