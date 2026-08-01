@@ -98,7 +98,10 @@ export default function WhoWeServePage() {
               <p>
                 Our membership reflects the full diversity of the industry. From students just beginning their careers to senior executives managing institutional capital, from sole practitioners to national firms, from local chapters to cross-border investments—MREA provides the professional community, resources, and advocacy that every segment needs.
               </p>
-              <p style={{ color: theme.navy }} className="font-semibold text-lg border-l-4 pl-6 py-4" style={{ borderColor: theme.gold }}>
+              <p
+                className="font-semibold text-lg border-l-4 pl-6 py-4"
+                style={{ color: theme.navy, borderColor: theme.gold }}
+              >
                 We are open to all who uphold integrity and excellence in their professional practice.
               </p>
             </div>
