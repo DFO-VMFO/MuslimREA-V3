@@ -12,6 +12,8 @@ const theme = {
   lightGray: '#F5F7FA'
 };
 
+const applicationFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfevDW9JN9AIdtWxpOusG68QP5GGp3mO5MkT19F45WBZYClHg/viewform';
+
 const membershipPlans = [
   {
     name: 'Student Membership',
@@ -84,6 +86,64 @@ export default function Membership() {
           </div>
         </div>
 
+        {/* Benefits Section */}
+        <div className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Why Join MREA?</h2>
+              <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { title: 'Global Network', desc: 'Connect with 15,000+ professionals across 52 chapters worldwide.' },
+                { title: 'Deal Flow Access', desc: 'Exclusive opportunities in high-capital development and investment.' },
+                { title: 'Professional Development', desc: 'Access to research, advocacy, and leadership programs.' },
+                { title: 'Community Impact', desc: 'Support initiatives that advance our communities globally.' }
+              ].map((benefit, i) => (
+                <div key={i} className="text-center">
+                  <h3 className="text-lg font-bold mb-3" style={{ color: theme.navy }}>{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Application Form Section */}
+        <div className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Membership Application</h2>
+              <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
+                Complete the application below to begin your membership journey with MREA. If the form does not load properly, use the direct link below.
+              </p>
+            </div>
+
+            <div className="mb-6 text-center">
+              <a
+                href={applicationFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center font-semibold transition"
+                style={{ color: theme.navy }}
+              >
+                Open the application in a new tab
+              </a>
+            </div>
+
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm bg-gray-50">
+              <iframe
+                src={applicationFormUrl}
+                title="MREA Membership Application"
+                className="w-full min-h-[900px] border-0"
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Membership Plans */}
         <div className="py-16" style={{ backgroundColor: theme.lightGray }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,37 +185,19 @@ export default function Membership() {
             </div>
 
             <div className="text-center mt-12">
-              <button className="px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5" 
-                      style={{ backgroundColor: theme.gold, color: theme.navy }}>
+              <a
+                href={applicationFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex px-8 py-3 rounded-sm font-bold text-lg transition shadow-xl hover:-translate-y-0.5"
+                style={{ backgroundColor: theme.gold, color: theme.navy }}
+              >
                 Apply for {membershipPlans[selectedPlan].name} Membership
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold" style={{ color: theme.navy }}>Why Join MREA?</h2>
-              <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: theme.gold }}></div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { title: 'Global Network', desc: 'Connect with 15,000+ professionals across 52 chapters worldwide.' },
-                { title: 'Deal Flow Access', desc: 'Exclusive opportunities in high-capital development and investment.' },
-                { title: 'Professional Development', desc: 'Access to research, advocacy, and leadership programs.' },
-                { title: 'Community Impact', desc: 'Support initiatives that advance our communities globally.' }
-              ].map((benefit, i) => (
-                <div key={i} className="text-center">
-                  <h3 className="text-lg font-bold mb-3" style={{ color: theme.navy }}>{benefit.title}</h3>
-                  <p className="text-gray-600 text-sm">{benefit.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </main>
       <Footer />
     </div>

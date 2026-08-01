@@ -59,6 +59,7 @@ export default function Navbar() {
 
   const aboutItems = [
     { href: '/about', title: 'Overview', desc: 'Our history, mission & 501(c)(6) purpose' },
+    { href: '/who-we-serve', title: 'Who We Serve', desc: 'Professional segments & institutional focus' },
     { href: '/about#leadership', title: 'Leadership', desc: 'Board of Directors & operational team' },
     { href: '/about#chairman', title: "Chairman's Message", desc: 'A message from Zulikha Hussain' },
   ];
